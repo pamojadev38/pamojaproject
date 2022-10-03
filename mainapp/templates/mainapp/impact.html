@@ -1,0 +1,424 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pamoja CBO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../../../fonts.googleapis.com/cssa1c0.css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/stuff.css" />
+  <link rel="stylesheet" href="css/stuff2.css" /> -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+        integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+        <link href="https://db.onlinewebfonts.com/c/12ca6eb8a45b8ac406fb5a09bb9daab2?family=Lyon+Display+Web+Black" rel="stylesheet" type="text/css"/>
+    <script nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+<style>
+    .btona {
+        cursor: pointer;
+        border-radius: 7px;
+        border: 2px solid transparent; 
+        background-color:#35954b;
+        padding:11px 15px;
+        line-height:1.2;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
+        vertical-align:middle;
+    }
+    .btona:hover{
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: #35954b !important;
+        color: #fff !important;
+        border-color: #35954b !important; 
+    }
+    .btona2{
+        cursor: pointer;
+        border-radius: 7px;
+        border: 2px solid transparent; 
+        background-color:#d2e7c4;
+        padding:11px 15px;
+        line-height:1.2;
+        font-size: 14px;
+        font-weight: bold;
+        color: #000;
+        box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
+        vertical-align:middle;
+    }
+    .btona2:hover{
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: #d2e7c4 !important;
+        color: #000 !important;
+        border-color: #d2e7c4 !important;
+    }
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+  .our{
+    font-size: 60px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 40px;
+  }
+  .impact{
+    font-size:50px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 40px;
+  }
+  .mobiliner{
+    line-height:1.4;
+  }
+  .t1{
+    font-size:40px;
+  }
+  .t2{
+    font-size:20px;
+  }
+  .t3{
+    font-size:40px;
+  }
+  .t4{
+    font-size:20px;
+  }
+}
+
+@media only screen and (min-width : 480px) {
+  .our{
+  font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
+}
+.impact{
+  font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
+}
+.t1{
+    font-size:60px;
+  }
+  .t2{
+    font-size:40px;
+  }
+  .t3{
+    font-size:40px;
+  }
+  .t4{
+    font-size:30px;
+  }
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+  .our{
+  font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
+}
+.impact{
+  font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
+}
+.t1{
+    font-size:60px;
+  }
+  .t2{
+    font-size:40px;
+  }
+  .t3{
+    font-size:40px;
+  }
+  .t4{
+    font-size:30px;
+  }
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+  .our{
+  font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
+}
+.impact{
+  font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
+}
+.t1{
+    font-size:60px;
+  }
+  .t2{
+    font-size:40px;
+  }
+  .t3{
+    font-size:40px;
+  }
+  .t4{
+    font-size:30px;
+  }
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+.our{
+  font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
+}
+.impact{
+  font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
+}
+.t1{
+    font-size:60px;
+  }
+  .t2{
+    font-size:40px;
+  }
+  .t3{
+    font-size:40px;
+  }
+  .t4{
+    font-size:30px;
+  }
+}
+</style>
+</head>
+
+<body style="background-image:url(../../static/images/blob-haikei2.svg);background-size:cover;background-attachment:scroll;background-repeat:no-repeat;">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'mainapp:home' %}">
+                <img class="img-fluid" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
+                    style="width:180px;height:auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">What We Do</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'mainapp:causes' %}" style="font-size: 14px;">Causes</a>
+                            <a class="dropdown-item" href="{% url 'mainapp:impact' %}" style="font-size: 14px;">Our
+                                Impact</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br><br><br>
+    <div class="container pt-2" style="max-width:1400px;">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <p>
+                    <span class="our" style="">Our</span><br>
+                    <span class="impact" style="">Impact</span>
+                </p>
+                <p class="pt-4 mobiliner" style="font-family: 'Brandon Text';">
+                  Your generosity makes it possible for our work to save lives, educate people about addiction, open hearts, 
+                  and create meaningful change that touches countless lives. Whether it's a one-time gift or a recurring donation, 
+                  every dollar goes directly to our mission of raising up recovery voices.
+                </p>
+                
+                <hr style="padding-top:2px;">
+                <div class="btn-toolbar pt-2" role="toolbar" aria-label="Toolbar with button groups">
+                  <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <a href="{% url 'mainapp:volunteer' %}">
+                        <button type="button" class="btn btn-primary btn-lg" style="background-color:#027701;border:#027701;font-family:'Brandon Text';font-weight:bold;border-radius:7px;padding:11px 15px;">Volunteer with Us</span></button>
+                    </a>
+                  </div>
+                  <div class="btn-group mr-2" role="group" aria-label="Second group">
+                    <a href="{% url 'mainapp:mentor' %}">
+                        <button type="button" class="btona2"><span style="font-family:'Brandon Text'">Mentor</span></button>
+                    </a>
+                  </div>
+                  <div class="btn-group mr-2" role="group" aria-label="Third group">
+                    <a href="{% url 'mainapp:about' %}#donatesection">
+                        <button type="button" class="btona"><span style="font-family:'Brandon Text'">Donate</span></button>
+                    </a>
+                  </div>
+                </div><br>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6">
+              <img src="{% static 'images/image140.png' %}" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="row pt-5 align-items-center">
+          <div class="col-md-6">
+            <img src="{% static 'images/peopleimpact.png' %}" class="img-fluid">
+          </div>
+          
+          <div class="col-md-3">
+            <p style="font-family:'Lyon Display Web Black';">
+              <span class="t1">15,687</span> <br>
+              <span class="t2" style="color:#027701">Beneficiaries</span>
+            </p>
+          </div>
+
+          <div class="col-md-3">
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text'">
+              Pamoja Community Based Organization, through its programs serves a total of 15,687 direct 
+              beneficiaries including PEPFAR supported 3,722 adolescent girls and young women, 5,886 orphans 
+              and vulnerable children and additional 3,104 enrolled in child sponsorship program supported by Plan International.
+            </p>
+          </div>
+        </div>
+
+        <div class="row pt-5 align-items-center">
+          <div class="col-md-3">
+            <img src="{% static 'images/test.svg' %}" class="img-fluid">
+          </div>
+          <div class="col-md-3">
+            <p style="font-family:'Lyon Display Web Black';">
+              <span class="t3">19,621</span><br>
+              <span class="t4" style="color:#027701"> HIV Tests</span>
+            </p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">
+              A total of 11,091 (84%) of our direct beneficiaries
+              received HIV test including children, adolescents and young
+              women aged 20-24
+            </p>
+          </div>
+          <div class="col-md-3 order-4 order-md-3">
+            <p style="font-family:'Lyon Display Web Black';">
+              <span class="t3">2,718</span><br>
+              <span class="t4" style="color:#027701"> School Fees</span>
+            </p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">
+              We provided school fees support to over 2,000 children in secondary schools
+            </p>
+          </div>
+          <div class="col-md-3 order-3 order-md-3">
+            <img src="{% static 'images/graduate.svg' %}" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="row pt-5">
+          <div class="col-md-3">
+            <center>
+              <img src="{% static 'images/pexels-karolina-grabowska-7282106.jpg' %}" class="img-fluid" style="width:300px;height:200px;">
+            </center>
+            
+            <p class="pt-2" style="font-family:'Lyon Display Web Black';">
+              <span style="font-size:30px">5,311</span>
+              <span style="font-size:25px;color:#027701">&nbsp;&nbsp;Sanitary Pads</span>
+            </p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">We have provided year round sanitary pads and sex 
+              education to over 1,325 which has helped girls gain more school days and cub absenteeism</p>
+          </div>
+
+          <div class="col-md-3">
+            <center>
+              <img src="{% static 'images/contraceptives.png' %}" class="img-fluid" style="width:300px;height:200px;">
+            </center>
+            <p class="pt-2" style="font-family:'Lyon Display Web Black';">
+              <span style="font-size:30px">2,022</span>
+              <span style="font-size:25px;color:#027701">&nbsp;&nbsp;Contraceptives</span>
+            </p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">More than 1,049 girls and young women have been initiated in contraceptives</p>
+          </div>
+
+          <div class="col-md-3">
+            <center>
+              <img src="{% static 'images/cash.svg' %}" class="img-fluid" style="width:300px;height:200px;">  
+            </center>
+            <p class="pt-2" style="font-family:'Lyon Display Web Black';">
+              <span style="font-size:30px">531</span>
+              <span style="font-size:25px;color:#027701">&nbsp;&nbsp;Cash Transfers</span>
+            </p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">We gave out unconditional cash transfer to a total of 472 young women aged 20-24</p>
+          </div>
+
+          <div class="col-md-3">
+            <center>
+              <img src="{% static 'images/little-boy-dressing-up-to-go-to-school-5237892-4369520.png' %}" class="img-fluid" style="width:300px;height:200px;">
+            </center>
+            <p class="pt-2" style="font-family:'Lyon Display Web Black';">
+              <span style="font-size:30px">3,723</span>
+              <span style="font-size:25px;color:#027701">&nbsp;&nbsp;School Uniforms</span>
+            </p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">More than 3,723 children in secondary and primary schools have received school uniforms and other scholastic materials</p>
+          </div>
+        </div>
+
+        <div class="row pt-5 pb-5">
+          <div class="col-md-3">
+            <center>
+              <img src="{% static 'images/DSC_0238.jpg' %}" class="img-fluid" style="width:300px;height:200px;">
+            </center>
+          </div>
+          <div class="col-md-3">
+            <p class="pt-2" style="font-family:'Lyon Display Web Black';">
+              <span style="font-size:30px">2,400</span><br>
+              <span style="font-size:25px;color:#027701">Early Child Development</span>
+            </p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">More than 600 children benefited from our early child development and education (ECD) support</p>
+          </div>
+          <div class="col-md-3">
+            <center>
+              <img src="{% static 'images/baby.svg' %}" class="img-fluid" style="width:300px;height:200px;">
+            </center>
+          </div>
+          <div class="col-md-3">
+            <p class="pt-2" style="font-family:'Lyon Display Web Black';">
+              <span style="font-size:30px">2,604</span><br>
+              <span style="font-size:25px;color:#027701">Birth Registrations</span>
+            </p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">Over 1,204 children were facilitated to acquire birth certificates</p>
+          </div>
+        </div>
+
+        <div class="row pt-5 align-items-center pb-5">
+          <div class="col-md-6">
+            <img src="{% static 'images/womenprep.png' %}" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <p style="font-family:'Lyon Display Web Black';">
+              <span class="t1">530</span>
+              <span class="t2" style="color:#027701">&nbsp;&nbsp;Prep</span>
+            </p>
+            <p class="text-justify mobiliner" style="font-family:'Brandon Text'">
+              We have initiated 391 young women (15-24) on HIV Pre exposure prophylaxis to reduce their risk to contracting HIV.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <p class="text-center" style="font-family:'Brandon Text'">&copy; Copyright | 2022</p>
+
+</body>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script
+  src="{% static 'js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js%2bjquery.easing.1.3.js.pagespeed.jc.UfoK2ZK92N.js' %}"></script>
+<script>eval(mod_pagespeed__5Yoqz5Pwn);</script>
+<script>eval(mod_pagespeed_KZlkIIJlO3);</script>
+<script>eval(mod_pagespeed_QWr0uXaXaU);</script>
+<script>eval(mod_pagespeed_pnj9KVQygE);</script>
+<script
+  src="{% static 'js/jquery.waypoints.min.js%2bjquery.stellar.min.js%2bowl.carousel.min.js%2bjquery.magnific-popup.min.js.pagespeed.jc.CE0oN1Bwzq.js' %}"></script>
+<script>eval(mod_pagespeed_6t$u8$1XBS);</script>
+<script>eval(mod_pagespeed_YhLXOfd9vP);</script>
+<script>eval(mod_pagespeed_xdKIJPVMXB);</script>
+<script>eval(mod_pagespeed_hFobBDlaRU);</script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script
+  src="{% static 'js/jquery.fancybox.min.js%2baos.js%2bjquery.animateNumber.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.nGnVN_nqcj.js' %}"></script>
+<script>eval(mod_pagespeed_bPMfuRRc$t);</script>
+<script>eval(mod_pagespeed_327Vziik2k);</script>
+<script>eval(mod_pagespeed_dFb3UKP9Kq);</script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+<script>eval(mod_pagespeed_c7BIxLN_4h);</script>
+<script>eval(mod_pagespeed_HdekMp55Bh);</script>
+</body>
+
+<!-- Mirrored from preview.colorlib.com/theme/givehope/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 May 2022 13:09:47 GMT -->
+
+</html>

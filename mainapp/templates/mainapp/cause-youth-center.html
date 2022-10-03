@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pamoja CBO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+        integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+    <link href="https://db.onlinewebfonts.com/c/12ca6eb8a45b8ac406fb5a09bb9daab2?family=Lyon+Display+Web+Black"
+        rel="stylesheet" type="text/css" />
+
+    <style>
+        .lyon {
+            font-family: 'Lyon Display Web Black'
+        }
+        .arnhem {
+            font-family: 'Arnhem Blond'
+        }
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+    .mobiliner{
+        line-height:1.4;
+    }
+    .cha-1 {
+        order:1;
+    }
+    .cha-2{
+        padding-top:25px;
+        order:2;
+    }
+}
+
+@media only screen and (min-width : 480px) {
+
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+
+}
+</style>
+    <script
+        nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'mainapp:home' %}">
+                <img class="img-fluid" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
+                    style="width:180px;height:auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">What We Do</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'mainapp:causes' %}" style="font-size: 14px;">Causes</a>
+                            <a class="dropdown-item" href="{% url 'mainapp:impact' %}" style="font-size: 14px;">Our
+                                Impact</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      <br><br><br><br><br>
+      
+    <div class="container" style="max-width: 1440px;">
+        <div class="row align-items-center">
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <!-- <h2 class="text-center"><span style="font-weight:bold">D.R.E.A.M.S.</span> - Reducing new HIV  infections and preventing GBV  among Adolescent girls and young women ages 9-24</h2> -->
+                <h1 class="lyon" style="font-weight: bold;letter-spacing: 3px;">Pamoja Youth Center.</h1>
+                <p class="text-justify">We have designed a whole-of-society response to mental health strains, which discretely spiraled in the wake of COVID-19 resulting in a constantly deteriorating mental health impact.</p>
+            <br>
+            </div>
+            <div class="col-md-5">
+                <img src="{% static 'images/dreams.png' %}" class="img-fluid">
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+      <div class="container" style="max-width:1440px">
+        
+        <div class="row">
+    <div class="col-xl-4 order-xl-2 cha-2">
+        <!-- Progress track -->
+        <div class="card">
+            <!-- Card header -->
+            <div class="card-header">
+                <!-- Title -->
+                <h5 class="h3 mb-0">
+                    <span style="font-weight: bold;font-family:'Lyon Display Web Black'">More Like This. </span>
+                    <a href="{% url 'mainapp:causes' %}" class="btn btn-sm btn-primary"
+                        style="float:right;border-radius:7px;font-weight: bold;"><span style="font-family: 'Brandon Text'!important">SEE ALL</span></a></h5>
+            </div>
+            <!-- Card body -->
+            <div class="card-body">
+                <!-- List group -->
+                <ul class="list-group list-group-flush list my--3">
+                    
+                    <p class="text-gray display-5 mobiliner">1. <a href="{% url 'mainapp:cause-she-leads' %}">Inclusion of Girls in decision making.</a></p>
+                    <p class="text-gray display-5 mobiliner">2. <a href="{% url 'mainapp:child-sponsorship' %}">Support the Children's Education.</a></p>
+                    <p class="text-gray display-5 mobiliner">3. <a href="{% url 'mainapp:sustainable-livelihoods' %}">Sustainable Livelihoods.</a></p>
+                    <p class="text-gray display-5 mobiliner">4. <a href="{% url 'mainapp:cause-safe-water-projects' %}">Safe Water Projects.</a></p>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-8 order-xl-1 cha-1">
+        <div class="row">
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col-8">
+                        <h3 class="mb-0 lyon" style="font-weight: bold;">Program Details </h3>
+                    </div>
+                    <div class="col-4 text-right">
+                        <!--<a href="#!" class="btn btn-sm btn-primary">Settings</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="text-justify mobiliner">
+                    Past trends have demonstrated the impact of mental health interventions on productivity and life expetancy of chosen populations.
+                    The importance of integrating social efforts to achieve optimal economic productivity is therefore unavoidable.</p> 
+                <p class="text-justify mobiliner">By providing unrestricted access to mental health awareness and access, Pamoja Youth Center is able to provide a perfect avenue for victims who are both willing or unwiling
+                    to come out of their shell to passively or actively interact with similar or distinct stories that enable them to take an extra step on their
+                    journey towards self compassion and recovery.</p> 
+                <p class="text-justify mobiliner">The Pamoja Youth Center Facilitation Team would like to assure all partners, external actors and participants 
+                    of exclusive and value driven content even as we continue seeking to make the world more accomodative and habitable.</p>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+      </div>
+
+
+<br><br><br>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script
+  src="{% static 'js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js%2bjquery.easing.1.3.js.pagespeed.jc.UfoK2ZK92N.js' %}"></script>
+<script>eval(mod_pagespeed__5Yoqz5Pwn);</script>
+<script>eval(mod_pagespeed_KZlkIIJlO3);</script>
+<script>eval(mod_pagespeed_QWr0uXaXaU);</script>
+<script>eval(mod_pagespeed_pnj9KVQygE);</script>
+<script
+  src="{% static 'js/jquery.waypoints.min.js%2bjquery.stellar.min.js%2bowl.carousel.min.js%2bjquery.magnific-popup.min.js.pagespeed.jc.CE0oN1Bwzq.js' %}"></script>
+<script>eval(mod_pagespeed_6t$u8$1XBS);</script>
+<script>eval(mod_pagespeed_YhLXOfd9vP);</script>
+<script>eval(mod_pagespeed_xdKIJPVMXB);</script>
+<script>eval(mod_pagespeed_hFobBDlaRU);</script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script
+  src="{% static 'js/jquery.fancybox.min.js%2baos.js%2bjquery.animateNumber.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.nGnVN_nqcj.js' %}"></script>
+<script>eval(mod_pagespeed_bPMfuRRc$t);</script>
+<script>eval(mod_pagespeed_327Vziik2k);</script>
+<script>eval(mod_pagespeed_dFb3UKP9Kq);</script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+<script>eval(mod_pagespeed_c7BIxLN_4h);</script>
+<script>eval(mod_pagespeed_HdekMp55Bh);</script>
+
+</body>
+
+<!-- Mirrored from preview.colorlib.com/theme/givehope/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 May 2022 13:09:47 GMT -->
+
+</html>

@@ -1,0 +1,246 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pamoja CBO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="../../../fonts.googleapis.com/cssa1c0.css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="css/stuff.css" />
+<link rel="stylesheet" href="css/stuff2.css" /> -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+<link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+      integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <script
+      nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+
+
+<style>
+  
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+  .blogtitle{
+    font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
+  }
+  .blogheading{
+    font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 30px;font-weight:500;
+  }
+  .mobiliner{
+    line-height:1.4;
+  }
+}
+
+@media only screen and (min-width : 480px) {
+  .blogtitle{
+    font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;
+  }
+  .blogheading{
+    font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
+  }
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+  .blogtitle{
+    font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;
+  }
+  .blogheading{
+    font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
+  }
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+  .blogtitle{
+    font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;
+  }
+  .blogheading{
+    font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
+  }
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+  .blogtitle{
+    font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;
+  }
+  .blogheading{
+    font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
+  }
+}
+</style>
+
+
+</head>
+<body>
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'mainapp:home' %}">
+            <img class="img-fluid" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
+                style="width:180px;height:auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">What We Do</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'mainapp:causes' %}" style="font-size: 14px;">Causes</a>
+                        <a class="dropdown-item" href="{% url 'mainapp:impact' %}" style="font-size: 14px;">Our
+                            Impact</a>
+                    </div>
+                </li>
+                <li class="nav-item active"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  <br><br><br><br><br>
+  <h1 class="text-center blogtitle" style="">Our Blog&nbsp;&nbsp;<img src="https://img.icons8.com/fluency/36/undefined/blog.png"/></h1>
+  <hr width="15%" class="text-center" style="border:2px solid black;margin-top:-5px;">
+  <br><br>
+  <main role="main" class="container">
+    <div class="row">
+    <div class="col-md-8 blog-main">
+        <!-- <h3 class="pb-3 mb-4 font-italic border-bottom">
+        From the Firehose 
+        </h3> -->
+
+        <div class="blog-post">
+        <h2 class="blog-post-title blogheading mobiliner" style="">
+          Empowering Girls through Socio-Economic approaches
+        </h2>
+        <p class="blog-post-meta">May 31, 2019 by <a href="#">admin</a></p>
+
+        <p class="mobiliner">
+          From Marjorie Mack oludhe's freedom song 'Atieno yo!'' and 'coming to birth, to Maya Angelou's 'I know why the caged bird sings', many writers 
+          expressed how the African girl was abandoned and how their rights have never been thought of and infringed, being given the second place in any 
+          household after their brothers, to being married off for wealth to older men when they hit their puberty, the African society have for a very 
+          long time neglected their girls and used them as property to acquire wealth whenever they deem it necessary.
+          But 'ring the bells that can still ring, forgetting the perfect sacrifice, there is a hole in every crack, that's how the light gets in, and this 
+          is where Pamoja CBO stems in, to give these girls back their stolen dignity. And as the Kenya continues to evolve and embrace new inventions, girls 
+          are given a chance to a more bearable and comfortable life. They are being given a chance they never had, taken to school and be supported throughout 
+          without missing some days during the usual month, and being empowered to be resilient, confident and independent when there's need to be.
+        </p>
+        <p><em>Continue reading</em>...</p>
+        <hr>        
+        
+        </div><!-- /.blog-post -->
+
+        <!-- <div class="blog-post">
+        <h2 class="blog-post-title" style="font-family: 'Playfair Display', serif;line-height: 48px;font-size: 40px;font-weight:500;">Feed the Animals campaign</h2>
+        <p class="blog-post-meta">March 23, 2022 by <a href="#">Steven Grant</a></p>
+
+        <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+        <blockquote>
+            <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </blockquote>
+        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p><em>Continue reading</em>...</p>
+      </div>/.blog-post -->
+
+        <!--<div class="blog-post">
+        <h2 class="blog-post-title" style="font-family: 'Playfair Display', serif;line-height: 48px;font-size: 40px;font-weight:500;">Save the Girl Child Campaign</h2>
+        <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
+
+        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <ul>
+            <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+            <li>Donec id elit non mi porta gravida at eget metus.</li>
+            <li>Nulla vitae elit libero, a pharetra augue.</li>
+        </ul>
+        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        <p><em>Continue reading...</em></p>
+        </div> /.blog-post -->
+
+        <nav class="blog-pagination">
+        <a class="btn btn-primary" href="#">Older</a>
+        <a class="btn btn-secondary disabled" href="#">Newer</a>
+        </nav>
+
+    </div><!-- /.blog-main -->
+    
+    <aside class="col-md-4 blog-sidebar"><br>
+        <div class="p-3 mb-3 rounded" style="background-color:#D2E7C4;">
+        <h4 class="">About</h4>
+        <p class="mb-0">This is temporary this is temporary this is temporary this is temporary this is temporary this is temporary
+            this is temporary this is temporary this is temporary this is temporary this is temporary this is temporary this is temporary this is temporary 
+        </p>
+        </div>
+
+        <div class="p-3">
+        <h4 class="">Archives</h4>
+        <ol class="list-unstyled mb-0">
+            <li><a href="#">June 2013</a></li>
+            <li><a href="#">May 2013</a></li>
+            <li><a href="#">April 2013</a></li>
+        </ol>
+        </div>
+
+        <div class="p-3">
+        <h4 class="">Elsewhere</h4>
+        <ol class="list-unstyled">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ol>
+        </div>
+    </aside><!-- /.blog-sidebar -->
+
+    </div><!-- /.row -->
+
+</main>
+<br><br><br>
+</body>
+
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script
+  src="{% static 'js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js%2bjquery.easing.1.3.js.pagespeed.jc.UfoK2ZK92N.js' %}"></script>
+<script>eval(mod_pagespeed__5Yoqz5Pwn);</script>
+<script>eval(mod_pagespeed_KZlkIIJlO3);</script>
+<script>eval(mod_pagespeed_QWr0uXaXaU);</script>
+<script>eval(mod_pagespeed_pnj9KVQygE);</script>
+<script
+  src="{% static 'js/jquery.waypoints.min.js%2bjquery.stellar.min.js%2bowl.carousel.min.js%2bjquery.magnific-popup.min.js.pagespeed.jc.CE0oN1Bwzq.js' %}"></script>
+<script>eval(mod_pagespeed_6t$u8$1XBS);</script>
+<script>eval(mod_pagespeed_YhLXOfd9vP);</script>
+<script>eval(mod_pagespeed_xdKIJPVMXB);</script>
+<script>eval(mod_pagespeed_hFobBDlaRU);</script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script
+  src="{% static 'js/jquery.fancybox.min.js%2baos.js%2bjquery.animateNumber.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.nGnVN_nqcj.js' %}"></script>
+<script>eval(mod_pagespeed_bPMfuRRc$t);</script>
+<script>eval(mod_pagespeed_327Vziik2k);</script>
+<script>eval(mod_pagespeed_dFb3UKP9Kq);</script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+<script>eval(mod_pagespeed_c7BIxLN_4h);</script>
+<script>eval(mod_pagespeed_HdekMp55Bh);</script>
+</body>
+
+<!-- Mirrored from preview.colorlib.com/theme/givehope/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 May 2022 13:10:02 GMT -->
+</html>

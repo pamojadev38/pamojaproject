@@ -1,0 +1,352 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pamoja CBO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="stylesheet" href="css/stuff.css" />
+  <link rel="stylesheet" href="css/stuff2.css" /> -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
+  <script
+    nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+
+<style>
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+  .testitle{
+    font-size:26.5px;
+    margin-bottom:5px;
+  }
+  .testitle1{
+    font-size:26.5px;
+    margin-bottom:10px;
+  }
+  .mobiliner{
+    line-height:1.4;
+  }
+  .bishop{
+    margin-top:-30px;
+  }
+  .bishop2{
+    margin-top:20px;
+  }
+  .pleft{
+    padding-left:1.5em;
+    text-indent:-1.5em;
+  }
+  .testcenter{
+    text-align:center;
+    font-size:30px!important;
+  }
+}
+
+@media only screen and (min-width : 480px) {
+
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+
+}
+</style>
+
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'mainapp:home' %}">
+            <img class="img-fluid" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
+                style="width:180px;height:auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">What We Do</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'mainapp:causes' %}" style="font-size: 14px;">Causes</a>
+                        <a class="dropdown-item" href="{% url 'mainapp:impact' %}" style="font-size: 14px;">Our
+                            Impact</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <br><br><br><br><br><br><br><br><br>
+  <div>
+    <div class="">
+      <div class="" style="background-image: url('../../static/images/BACKGROUNDS/aboutbanner.png'); height:400px;background-position: center center;background-size:cover;">
+        <div class=" container" style="color:#fff;font-size:15px;left:15px;right:15px;text-align:left;text-shadow:none;top:90%;margin-top:-180px;padding-top:180px">
+          <h6 class="animated fadeIn" style="font-size: 40px;font-weight: bold;"><span style="background-color:rgba(0, 0, 0, 0.4)">&nbsp;About Us&nbsp;</span></h6>
+            <!-- <a href="#who-we-are" class="animated fadeIn btn" style="color:white; padding: 14px 54px;background-color: #007bff;border:none;font-weight: bold;">Get Started</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-color: #D2E7C4;">
+    <br><br>
+    <div class="container" style="max-width: 1440px;">
+        <div class="row align-items-center pt-3 pb-5">
+            <div class="col-md-5">
+                <img src="{% static 'images/home/sitdown.jpg' %}" alt="" class="img-fluid" style="border-radius:10px;">
+                <br><br>
+            </div>
+            
+            <div class="col-md-1"></div>
+            <div class="col-md-6" style="">
+                <h1 class="testitle1" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Who We Are&nbsp;<img src="https://img.icons8.com/doodle/40/000000/crowd.png"/></h1>
+                
+                <p class="text-justify mobiliner">
+                    Pamoja CBO is a human centered grassroot organization that exists to 
+                    improve the quality of life of communities in Western Kenya. We are 
+                    passionate about helping communities develop the skills they need to 
+                    make positive changes for themselves. We do so by developing, designing, 
+                    supporting and cascading service based initiatives and programs to people 
+                    in society who need them the most.
+                </p>
+                <p class="text-justify mobiliner">
+                  We prioritize health care, education, 
+                  water & sanitation, youth and women economic empowerment. We have embedded 
+                  real time approaches to engaging vulnerable children and adolescent women 
+                  and young girls with the aim of creating happy, healthy and able communities.
+                </p>
+                <br>
+                <!-- <a href="{% url 'mainapp:contact' %}"><button class="btn btn-primary" style="padding:11px 15px;border-radius:7px;border:none;color:white;font-weight: bold;">Get in touch</button></a> -->
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(210, 231, 196, 1)" offset="0%"></stop><stop stop-color="rgba(210, 231, 196, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,70L48,73.3C96,77,192,83,288,86.7C384,90,480,90,576,88.3C672,87,768,83,864,75C960,67,1056,53,1152,40C1248,27,1344,13,1440,6.7C1536,0,1632,0,1728,15C1824,30,1920,60,2016,73.3C2112,87,2208,83,2304,80C2400,77,2496,73,2592,75C2688,77,2784,83,2880,81.7C2976,80,3072,70,3168,58.3C3264,47,3360,33,3456,38.3C3552,43,3648,67,3744,66.7C3840,67,3936,43,4032,41.7C4128,40,4224,60,4320,58.3C4416,57,4512,33,4608,20C4704,7,4800,3,4896,13.3C4992,23,5088,47,5184,55C5280,63,5376,57,5472,55C5568,53,5664,57,5760,60C5856,63,5952,67,6048,66.7C6144,67,6240,63,6336,66.7C6432,70,6528,80,6624,81.7C6720,83,6816,77,6864,73.3L6912,70L6912,100L6864,100C6816,100,6720,100,6624,100C6528,100,6432,100,6336,100C6240,100,6144,100,6048,100C5952,100,5856,100,5760,100C5664,100,5568,100,5472,100C5376,100,5280,100,5184,100C5088,100,4992,100,4896,100C4800,100,4704,100,4608,100C4512,100,4416,100,4320,100C4224,100,4128,100,4032,100C3936,100,3840,100,3744,100C3648,100,3552,100,3456,100C3360,100,3264,100,3168,100C3072,100,2976,100,2880,100C2784,100,2688,100,2592,100C2496,100,2400,100,2304,100C2208,100,2112,100,2016,100C1920,100,1824,100,1728,100C1632,100,1536,100,1440,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z"></path></svg> -->
+
+<div class="container" style="max-width: 1440px;">
+  <br><br>
+  <h1 class="text-center pt-4"   style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our History&nbsp;<img src="https://img.icons8.com/external-flaticons-flat-flat-icons/36/000000/external-history-history-flaticons-flat-flat-icons-3.png"/></h1>
+  
+  <div class="row p-3 align-items-center">
+      <div class="col-md-6" style="padding-top:30px;">
+          <img src="{% static 'images/home/pamojahistory.jpg' %}" style="border-radius:10px;" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+          <p class="pt-5 text-justify mobiliner">"Pamoja" (which means 'together' in Swahili) was formed in 2007 to bring 
+              together community groups and support them in achieving their objectives.
+              Pamoja CBO developed from the observations of several people who were frequently
+              rock climbing in Kit Mikayi area of Western Kenya. We all had backgrounds in health
+              and development work and noticed the struggle of individuals to provide basic necessities for 
+              their families, such as safe drinking water, a healthy diet, sanitatin and education. <br>
+              More importantly we noticed how many community members were working on each others' plots of land, a youth group 
+              teaching HIV prevention through a soccer club, a community run pharmacy, a widow's group which supported orphans 
+              and many other groups which had formed to bring change to the community. However, many groups worked in isolation of each other,
+              had overlapping activities, did not have the training to maximize the impact of their efforts and lacked the resources
+              to establish projects, which they thought were important.
+          </p>
+      </div>
+  </div>
+  <br><br>
+</div>
+
+<span style="">
+  <!-- <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 120" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(210, 231, 196, 1)" offset="0%"></stop><stop stop-color="rgba(210, 231, 196, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,12L60,14C120,16,240,20,360,26C480,32,600,40,720,54C840,68,960,88,1080,96C1200,104,1320,100,1440,84C1560,68,1680,40,1800,34C1920,28,2040,44,2160,44C2280,44,2400,28,2520,24C2640,20,2760,28,2880,42C3000,56,3120,76,3240,70C3360,64,3480,32,3600,18C3720,4,3840,8,3960,14C4080,20,4200,28,4320,40C4440,52,4560,68,4680,66C4800,64,4920,44,5040,34C5160,24,5280,24,5400,24C5520,24,5640,24,5760,26C5880,28,6000,32,6120,44C6240,56,6360,76,6480,82C6600,88,6720,80,6840,64C6960,48,7080,24,7200,30C7320,36,7440,72,7560,72C7680,72,7800,36,7920,24C8040,12,8160,24,8280,30C8400,36,8520,36,8580,36L8640,36L8640,120L8580,120C8520,120,8400,120,8280,120C8160,120,8040,120,7920,120C7800,120,7680,120,7560,120C7440,120,7320,120,7200,120C7080,120,6960,120,6840,120C6720,120,6600,120,6480,120C6360,120,6240,120,6120,120C6000,120,5880,120,5760,120C5640,120,5520,120,5400,120C5280,120,5160,120,5040,120C4920,120,4800,120,4680,120C4560,120,4440,120,4320,120C4200,120,4080,120,3960,120C3840,120,3720,120,3600,120C3480,120,3360,120,3240,120C3120,120,3000,120,2880,120C2760,120,2640,120,2520,120C2400,120,2280,120,2160,120C2040,120,1920,120,1800,120C1680,120,1560,120,1440,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"></path></svg> -->
+</span>
+<div style="background-color: #d2e7c4;backface-visibility: calc(50%);">
+  <div class="container pt-5 pb-5">
+    <div class="row p-3">
+      <div class="col-md-6">
+        <h2 class="testitle" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our Mission&nbsp;<img
+            src="https://img.icons8.com/external-flaticons-flat-flat-icons/24/000000/external-rocket-achievements-flaticons-flat-flat-icons.png" />
+        </h2>
+        <p class="mobiliner">To empower communities to identify and address the most significant needs affecting their well-being</p>
+        <br><br>
+        <h2 class="testitle bishop" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our Vision&nbsp;<img
+            src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/24/000000/external-target-computer-programming-flaticons-lineal-color-flat-icons.png" />
+        </h2>
+        <p class="mobiliner">Creating Healthy, happy and Able Communities in Kenya</p>
+      </div>
+      <div class="col-md-6">
+        <h2 class="pb-2 testitle mobiliner bishop2"  style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our Objectives&nbsp;<img
+            src="https://img.icons8.com/color-glass/24/000000/clipboard.png" /></h2>
+        <p class="mobiliner"><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" />&nbsp;Enhance the capacity of
+          communities to: </p>
+        <ul>
+          <li class="mobiliner">Assess their strengths, capabilities and resources</li>
+          <li class="mobiliner">Assess and prioritize their needs</li>
+          <li class="mobiliner">Leverage additional resources to meet their needs</li>
+          <li class="mobiliner">Plan, implement and evaluate interventions</li>
+        </ul>
+        <p class="mobiliner"><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" />&nbsp;Strengthen community
+          leadership
+        </p>
+        <p class="mobiliner"><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" />&nbsp;Facilitate linkages,
+          collaboration and coordination between individuals, organizations and relevant Government Departments</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<!-- <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(210, 231, 196, 1)" offset="0%"></stop><stop stop-color="rgba(210, 231, 196, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,20L48,16.7C96,13,192,7,288,8.3C384,10,480,20,576,28.3C672,37,768,43,864,51.7C960,60,1056,70,1152,63.3C1248,57,1344,33,1440,23.3C1536,13,1632,17,1728,23.3C1824,30,1920,40,2016,51.7C2112,63,2208,77,2304,78.3C2400,80,2496,70,2592,55C2688,40,2784,20,2880,10C2976,0,3072,0,3168,3.3C3264,7,3360,13,3456,15C3552,17,3648,13,3744,21.7C3840,30,3936,50,4032,50C4128,50,4224,30,4320,25C4416,20,4512,30,4608,41.7C4704,53,4800,67,4896,65C4992,63,5088,47,5184,38.3C5280,30,5376,30,5472,30C5568,30,5664,30,5760,33.3C5856,37,5952,43,6048,38.3C6144,33,6240,17,6336,18.3C6432,20,6528,40,6624,43.3C6720,47,6816,33,6864,26.7L6912,20L6912,100L6864,100C6816,100,6720,100,6624,100C6528,100,6432,100,6336,100C6240,100,6144,100,6048,100C5952,100,5856,100,5760,100C5664,100,5568,100,5472,100C5376,100,5280,100,5184,100C5088,100,4992,100,4896,100C4800,100,4704,100,4608,100C4512,100,4416,100,4320,100C4224,100,4128,100,4032,100C3936,100,3840,100,3744,100C3648,100,3552,100,3456,100C3360,100,3264,100,3168,100C3072,100,2976,100,2880,100C2784,100,2688,100,2592,100C2496,100,2400,100,2304,100C2208,100,2112,100,2016,100C1920,100,1824,100,1728,100C1632,100,1536,100,1440,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z"></path></svg> -->
+
+<div class="container">
+  <br><br>
+  <h1 class="text-center testitle" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">Our Team</h1>
+  <br><br>
+  <div class="row">
+      <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+        <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/judy-alt.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Judith Owuor"></span>
+        <span class="" style="color:black"><span style="font-weight:bold;">Judith Owuor</span><br>Programs Manager</span>
+      </div>
+      <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+        <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Denielle.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Denielle Elliot"></span>
+        <span class="" style="color:black"><span style="font-weight:bold">Denielle Elliot, PhD</span><br>Strategic Communication and Engagement</span>
+      </div><br>
+      <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+        <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/fibi.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Fibi"></span>
+        <span class="" style="color:black"><span style="font-weight:bold;">Eunice Fibi Adhiambo</span><br>Finance and Administration Officer</span>
+      </div>
+      <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+        <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Suzanna.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Suzanna Attia"></span>
+        <span class="" style="color:black"><span style="font-weight:bold;">Dr. Suzanna Attia</span><br>Paediatric Gastroenterologist</span>
+      </div><br>
+      <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+        <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/lave.webp' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Awino Okore"></span>
+        <span class="" style="color:black"><span style="font-weight: bold;">Awino Okore</span><br>Strategy, Planning & Implementation Consultant.</span>
+      </div>
+  </div><br><br>
+  <center><a href="{% url 'mainapp:staff' %}"><button class="btn btn-primary" style="border-radius:10px;padding: 11px 15px;color:white;border:none;">See More Staff</button></a></center>
+</div>
+
+
+<br><br>
+<div id="donatesection" style="background-image:url(../../static/images/home/DSC_0613.jpg);background-position:right center;background-repeat: no-repeat;background-size:cover; background-attachment:scroll;">
+  <div class="container" style="padding-top:120px;padding-bottom:120px;">
+      <div class="row">
+          <div class="col-md-6"></div>
+          <div class="col-md-6">
+              <div style="background-color: white;border-radius:20px;padding:40px;">
+                  <h1 class="testcenter" style="font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;">They Need Your Help</h1>
+                  <p class="mobiliner">For <span style="color:#027701"><b>$15</b></span>, you can help one family for <strong>5 days</strong></p>
+                  <p class="mobiliner">To donate to our ongoing causes, use the following details:</p>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>Bank Name</td>
+                        <td><b>KCB(Kenya) Ltd</b></td>
+                      </tr>
+                      <tr>
+                        <td>Account Name</td>
+                        <td><b>PAMOJA CBO</b></td>
+                      </tr>
+                      <tr>
+                        <td>Account Number</td>
+                        <td><b>1207067156</b></td>
+                      </tr>
+                      <tr>
+                        <td>Branch Name</td>
+                        <td><b>United Mall</b></td>
+                      </tr>
+                      <tr>
+                        <td>Branch Code</td>
+                        <td><b>01243</b></td>
+                      </tr>
+                      <tr>
+                        <td>SWIFT Code</td>
+                        <td><b>KCBKENX</b></td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+<br><br>
+<h5 class="text-center">&copy; Copyright 2022 | All Rights Reserved</h5>
+<br>
+
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script
+  src="{% static 'js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js%2bjquery.easing.1.3.js.pagespeed.jc.UfoK2ZK92N.js' %}"></script>
+<script>eval(mod_pagespeed__5Yoqz5Pwn);</script>
+<script>eval(mod_pagespeed_KZlkIIJlO3);</script>
+<script>eval(mod_pagespeed_QWr0uXaXaU);</script>
+<script>eval(mod_pagespeed_pnj9KVQygE);</script>
+
+<script>
+  $(function() {
+    $('.owl-carousel').owlCarousel({
+        loop: false,
+        margin: 0,
+        nav: false,
+        responsive:{
+            0:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:4
+            }
+        }
+    });
+});
+</script>
+
+<script
+  src="{% static 'js/jquery.waypoints.min.js%2bjquery.stellar.min.js%2bowl.carousel.min.js%2bjquery.magnific-popup.min.js.pagespeed.jc.CE0oN1Bwzq.js' %}"></script>
+<script>eval(mod_pagespeed_6t$u8$1XBS);</script>
+<script>eval(mod_pagespeed_YhLXOfd9vP);</script>
+<script>eval(mod_pagespeed_xdKIJPVMXB);</script>
+<script>eval(mod_pagespeed_hFobBDlaRU);</script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script
+  src="{% static 'js/jquery.fancybox.min.js%2baos.js%2bjquery.animateNumber.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.nGnVN_nqcj.js' %}"></script>
+<script>eval(mod_pagespeed_bPMfuRRc$t);</script>
+<script>eval(mod_pagespeed_327Vziik2k);</script>
+<script>eval(mod_pagespeed_dFb3UKP9Kq);</script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+<script>eval(mod_pagespeed_c7BIxLN_4h);</script>
+<script>eval(mod_pagespeed_HdekMp55Bh);</script>
+</body>
+
+<!-- Mirrored from preview.colorlib.com/theme/givehope/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 May 2022 13:09:47 GMT -->
+
+</html>

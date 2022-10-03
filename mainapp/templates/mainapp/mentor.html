@@ -1,0 +1,268 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pamoja CBO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="css/stuff.css" />
+<link rel="stylesheet" href="css/stuff2.css" /> -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+        integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <script
+        nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+
+<style>
+    .btona1{
+        cursor: pointer;
+        border-radius: 7px;
+        border: 2px solid transparent; 
+        background-color:#027701;
+        padding:11px 12px;
+        line-height:1.2;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
+        vertical-align:middle;
+    }
+    .btona1:hover{
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: #027701 !important;
+        color: #fff !important;
+        border-color: #027701 !important;
+    }
+    .btona2{
+        cursor: pointer;
+        border-radius: 7px;
+        border: 2px solid transparent; 
+        background-color:#A0A6AB;
+        padding:11px 15px;
+        line-height:1.2;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
+        vertical-align:middle;
+    }
+    .btona2:hover{
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: #A0A6AB !important;
+        color: #fff !important;
+        border-color: #A0A6AB !important;
+    }
+    /* Extra small viewport or screen */
+    @media (min-width: 280px) and (max-width: 480px) {
+        .headtitle{
+            font-family: 'Arnhem Blond' !important;font-weight:900;font-size:30px;
+        }
+    }
+    
+    @media only screen and (min-width : 480px) {
+        .headtitle{
+            font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
+        }
+    }
+    /* Small viewport or screen */
+    @media only screen and (min-width : 768px) {
+        .headtitle{
+            font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
+        }
+    }
+    /* Medium viewport or screen */
+    @media only screen and (min-width : 992px) {
+        .headtitle{
+            font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
+        }
+    }
+    /* Large viewport or screen */
+    @media only screen and (min-width : 1200px) {
+        .headtitle{
+            font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'mainapp:home' %}">
+                <img class="img-fluid" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
+                    style="width:180px;height:auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">What We Do</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'mainapp:causes' %}"
+                                style="font-size: 14px;">Causes</a>
+                            <a class="dropdown-item" href="{% url 'mainapp:impact' %}" style="font-size: 14px;">Our
+                                Impact</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
+                    <li class="nav-item active"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a>
+                    </li>
+                    <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    {% if messages %}
+    <br><br><br><br>
+    {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% endif %}
+    <br><br><br><br>
+    <div class="tab-content clearfix">
+        <br>
+        <div class="container">
+            <div class="d-sm-none d-md-none d-lg-none">
+                <div class="btn-toolbar" style="justify-content:center!important;" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <a href="{% url 'mainapp:volunteer' %}">
+                            <button type="button" class="btona2">Become a Volunteer</button>
+                        </a>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Second group">
+                        <a href="{% url 'mainapp:mentor' %}">
+                            <button type="button" class="btona1">Become a Mentor with Us</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container d-none d-sm-block">
+            <ul class="nav nav-pills nav-fill" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'mainapp:volunteer' %}">Become a Volunteer</a>
+                </li>&nbsp;&nbsp;
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'mainapp:mentor' %}">Become a Mentor with Us</a>
+                </li>
+            </ul>
+        </div><br>
+        <div class="tab-pane active">
+            <div class="container">
+                <h1 class="text-center headtitle">Fill
+                out this form for a chance to become a Mentor</h1>
+            </div>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 "
+                        style="background-color:white;border-radius:10px;box-shadow:7px 7px 15px 4px rgb(204 204 204 / 30%)">
+                        <form class="pt-5 pb-5" method="POST">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    {{form.firstname|as_crispy_field}}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    {{form.lastname|as_crispy_field}}
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    {{form.email|as_crispy_field}}
+                                </div>
+                                <div class="form-group col-md-4">
+                                    {{form.company|as_crispy_field}}
+                                </div>
+                                <div class="form-group col-md-4">
+                                    {{form.country|as_crispy_field}}
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    {{form.phone_number|as_crispy_field}}
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    {{form.area_of_interest|as_crispy_field}}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {{form.any_other_details|as_crispy_field}}
+                            </div>
+                            <button type="submit" class="btn btn-primary"
+                                style="padding: 9px 16px;border-radius:9px;">Submit <i
+                                    class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 order-first order-md-2 d-none d-sm-block">
+                        <img src="{% static 'images/home/menta.png' %}" class="img-fluid">
+                    </div>
+                </div>
+
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script
+        src="{% static 'js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js%2bjquery.easing.1.3.js.pagespeed.jc.UfoK2ZK92N.js' %}"></script>
+    <script>eval(mod_pagespeed__5Yoqz5Pwn);</script>
+    <script>eval(mod_pagespeed_KZlkIIJlO3);</script>
+    <script>eval(mod_pagespeed_QWr0uXaXaU);</script>
+    <script>eval(mod_pagespeed_pnj9KVQygE);</script>
+    <script
+        src="{% static 'js/jquery.waypoints.min.js%2bjquery.stellar.min.js%2bowl.carousel.min.js%2bjquery.magnific-popup.min.js.pagespeed.jc.CE0oN1Bwzq.js' %}"></script>
+    <script>eval(mod_pagespeed_6t$u8$1XBS);</script>
+    <script>eval(mod_pagespeed_YhLXOfd9vP);</script>
+    <script>eval(mod_pagespeed_xdKIJPVMXB);</script>
+    <script>eval(mod_pagespeed_hFobBDlaRU);</script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script
+        src="{% static 'js/jquery.fancybox.min.js%2baos.js%2bjquery.animateNumber.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.nGnVN_nqcj.js' %}"></script>
+    <script>eval(mod_pagespeed_bPMfuRRc$t);</script>
+    <script>eval(mod_pagespeed_327Vziik2k);</script>
+    <script>eval(mod_pagespeed_dFb3UKP9Kq);</script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+    <script>eval(mod_pagespeed_c7BIxLN_4h);</script>
+    <script>eval(mod_pagespeed_HdekMp55Bh);</script>
+
+</body>
+
+</html>

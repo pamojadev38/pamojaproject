@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Brandon Text';
+    src: local('Brandon Text Regular'), local('Brandon-Text-Regular'),
+        url('../fonts/BrandonText/BrandonText-Regular.woff2') format('woff2'),
+        url('../fonts/BrandonText/BrandonText-Regular.woff') format('woff'),
+        url('../fonts/BrandonText/BrandonText-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'Arnhem Blond';
+    src: local('Arnhem Blond Regular'), local('Arnhem Blond Regular'),
+    	url('../fonts/arnhem-blond1.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}

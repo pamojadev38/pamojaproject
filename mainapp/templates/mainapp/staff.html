@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pamoja CBO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="stylesheet" href="css/stuff.css" />
+  <link rel="stylesheet" href="css/stuff2.css" /> -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
+  <link href="https://db.onlinewebfonts.com/c/12ca6eb8a45b8ac406fb5a09bb9daab2?family=Lyon+Display+Web+Black"
+        rel="stylesheet" type="text/css" />
+  <script
+    nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+
+<style>
+/* Extra small viewport or screen */
+@media (min-width: 280px) and (max-width: 480px) {
+  .staffheading{
+    font-size: 30px;font-weight: bold;color:black;font-family:'Lyon Display Web Black'
+  }
+  .stafftitle{
+    font-size:33px;
+  }
+}
+
+@media only screen and (min-width : 480px) {
+  .staffheading{
+    font-size: 33px;font-weight: bold;color:black;font-family:'Lyon Display Web Black'
+  }
+  .stafftitle{
+    font-size:33px;
+  }
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 768px) {
+  .staffheading{
+    font-size: 35px;font-weight: bold;color:black;font-family:'Lyon Display Web Black'
+  }
+  .stafftitle{
+    font-size:35px;
+  }
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+  .staffheading{
+    font-size: 37px;font-weight: bold;color:black;font-family:'Lyon Display Web Black'
+  }
+  .stafftitle{
+    font-size:37px;
+  }
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+  .staffheading{
+    font-size: 40px;font-weight: bold;color:black;font-family:'Lyon Display Web Black'
+  }
+  .stafftitle{
+    font-size:40px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'mainapp:home' %}">
+                <img class="img-fluid" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
+                    style="width:180px;height:auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">What We Do</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'mainapp:causes' %}" style="font-size: 14px;">Causes</a>
+                            <a class="dropdown-item" href="{% url 'mainapp:impact' %}" style="font-size: 14px;">Our
+                                Impact</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br><br><br><br><br>
+    <div>
+      <div class="">
+        <div class="" style="background-image: url('../../static/images/staffbanner.png'); height:400px;background-position: center center;background-size:cover;background-color: #d2e7c4;">
+          <div class=" container" style="color:#fff;font-size:15px;left:15px;right:15px;text-align:left;text-shadow:none;top:90%;margin-top:-180px;padding-top:180px">
+            <h6 class="animated fadeIn staffheading" style="">Our Amazing Staff</h6>
+              <!-- <a href="#who-we-are" class="animated fadeIn btn" style="color:white; padding: 14px 54px;background-color: #007bff;border:none;font-weight: bold;">Get Started</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  <div class="container">
+    <h1 class="stafftitle" style="font-weight:bold">Board of Directors</h1><br><br>
+    <div class="row">
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+            <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/avatar.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+            <span class="" style="color:black"><span style="font-weight: bold;">Portas Odula Olwande, Msc, PhD</span><br>Board Chair</span>
+            <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+            <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Valleria.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+            <span class="" style="color:black"><span style="font-weight:bold;">Valleria Ndege, BSc Nursing</span><br>Technical Advisor and Resources Mobilization</span>
+            <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+            <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Denielle.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+            <span class="" style="color:black"><span style="font-weight:bold">Denielle Elliot, PhD</span><br>Strategic Communication and Engagement</span>
+            <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+            <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Elizabeth.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+            <span class="" style="color:black"><span style="font-weight:bold;">Elizabeth Opiyo BSc, Msc, PhD</span><br>Research and Women's Empowerment</span>
+            <br><br>
+        </div>
+        <div class="w-100"></div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/avatar.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="" style="color:black"><span style="font-weight:bold;">Fr. Bernard Didacus Opiyo</span><br>Leadership and Individual Development</span>
+          <br><br>
+      </div>
+    </div><br>
+    <br>
+    <h1 class="stafftitle" style="font-weight:bold">Management & Team</h1><br><br>
+    <div class="row">
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+            <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Judy.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+            <span class="" style="color:black"><span style="font-weight:bold;">Judith Owuor</span><br>Programs Manager</span>
+            <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/fibi.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%" alt="Fibi"></span>
+          <span class="" style="color:black"><span style="font-weight:bold;">Eunice Fibi Adhiambo</span><br>Finance and Administration Officer</span>
+          <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Wicklife.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="" style="color:black"><span style="font-weight:bold;">Wicklife Orero</span><br>Ward Coordinator, OVC</span>
+          <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Merab.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="" style="color:black"><span style="font-weight:bold;">Merab Magak</span><br>Ward Coordinator</span>
+          <br><br>
+        </div>
+        <div class="w-100"></div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/avatar.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="" style="color:black"><span style="font-weight:bold;">Frank Sawo</span><br>Monitoring and Evaluation Coordinator</span>
+          <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/avatar.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="" style="color:black"><span style="font-weight:bold;">Emily Omondi</span><br>HIV Testing Service Provider</span>
+          <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/avatar.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="" style="color:black"><span style="font-weight:bold;">Christine Ololo</span><br>Project Coordinator, SHE LEADS</span>
+          <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/avatar.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="" style="color:black"><span style="font-weight:bold;">George Otieno</span><br>Child Sponsorship Project</span>
+          <br><br>
+        </div>
+        <div class="w-100"></div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/avatar.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="" style="color:black"><span style="font-weight:bold;">Markpphalen Odiwuor</span><br>ICT Officer, ECHO Project</span>
+          <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Sylvia.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="" style="color:black"><span style="font-weight:bold;">Sylvia Odhiambo</span><br>Ward Coordinator</span>
+          <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Irene.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="" style="color:black"><span style="font-weight:bold;">Irene Were</span><br>Ward Coordinator</span>
+          <br><br>
+        </div>
+    </div>
+    <br><br><br>
+    <h1 class="stafftitle" style="font-weight:bold">Advisory Board</h1><br><br>
+    <div class="row">
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+            <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Carrie.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+            <span class="" style="color:black"><span style="font-weight:bold;">Dr. Carrie Waterman</span><br>Interdisciplinary Research Scientist</span>
+            <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+            <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Suzanna.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+            <span class="" style="color:black"><span style="font-weight:bold;">Dr. Suzanna Attia</span><br>Paediatric Gastroenterologist</span>
+            <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+            <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Michaela.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+            <span class="" style="color:black"><span style="font-weight:bold;">Dr. Michaela Hynie</span><br>Researcher at New York University</span>
+            <br><br>
+        </div>
+        <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
+            <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/Godfred.jpg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+            <span class="" style="color:black"><span style="font-weight:bold;">Dr. Godfred Boateng</span><br>Assistant Professor at University of Texas</span>
+            <br><br>
+        </div>
+    </div>
+</div>
+<br><br><br><br>
+<h5 class="text-center">&copy; Copyright 2022 | All Rights Reserved</h5>
+<br><br>
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script
+    src="{% static 'js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js%2bjquery.easing.1.3.js.pagespeed.jc.UfoK2ZK92N.js' %}"></script>
+  <script>eval(mod_pagespeed__5Yoqz5Pwn);</script>
+  <script>eval(mod_pagespeed_KZlkIIJlO3);</script>
+  <script>eval(mod_pagespeed_QWr0uXaXaU);</script>
+  <script>eval(mod_pagespeed_pnj9KVQygE);</script>
+  <script
+    src="{% static 'js/jquery.waypoints.min.js%2bjquery.stellar.min.js%2bowl.carousel.min.js%2bjquery.magnific-popup.min.js.pagespeed.jc.CE0oN1Bwzq.js' %}"></script>
+  <script>eval(mod_pagespeed_6t$u8$1XBS);</script>
+  <script>eval(mod_pagespeed_YhLXOfd9vP);</script>
+  <script>eval(mod_pagespeed_xdKIJPVMXB);</script>
+  <script>eval(mod_pagespeed_hFobBDlaRU);</script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script
+    src="{% static 'js/jquery.fancybox.min.js%2baos.js%2bjquery.animateNumber.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.nGnVN_nqcj.js' %}"></script>
+  <script>eval(mod_pagespeed_bPMfuRRc$t);</script>
+  <script>eval(mod_pagespeed_327Vziik2k);</script>
+  <script>eval(mod_pagespeed_dFb3UKP9Kq);</script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+  <script>eval(mod_pagespeed_c7BIxLN_4h);</script>
+  <script>eval(mod_pagespeed_HdekMp55Bh);</script>
+</body>
+
+</html>
