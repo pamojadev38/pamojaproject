@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from .forms import VolunteerForm, MentorForm, MailListForm, ContactPageForm
+from .forms import VolunteerForm, PartnerForm, MailListForm, ContactPageForm
 from .models import ImageCategory, Volunteer, Post, ImageFile
 from django.contrib import messages
 from django.views.generic import CreateView
@@ -70,17 +70,17 @@ def volunteer_view(request):
     context = {'form':form} 
     return render(request, 'mainapp/volunteer.html', context)
 
-def mentor_view(request):
+def partner_view(request):
     if request.method == 'POST':
-        form = MentorForm(request.POST or None)
+        form = PartnerForm(request.POST or None)
         if form.is_valid():
             form.save()
             messages.success(request, 'Your details were submitted successfully')
-            return redirect('mainapp:mentor')
+            return redirect('mainapp:partner')
     else:
-        form = MentorForm()
+        form = PartnerForm()
     context = {'form':form}
-    return render(request, 'mainapp/mentor.html', context)
+    return render(request, 'mainapp/partner.html', context)
 
 def impact_view(request):
     return render(request, 'mainapp/impact.html')

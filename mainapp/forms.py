@@ -1,5 +1,5 @@
 from django import forms
-from .models import Volunteer, Mentor, ContactPage, MailList, Help_choices
+from .models import Volunteer, Partner, ContactPage, MailList, Help_choices
 from .countries import COUNTRIES
 
 class VolunteerForm(forms.ModelForm):
@@ -15,7 +15,7 @@ class VolunteerForm(forms.ModelForm):
         model = Volunteer
         fields = '__all__'
 
-class MentorForm(forms.ModelForm):
+class PartnerForm(forms.ModelForm):
     firstname = forms.CharField(widget=forms.TextInput(), label="First Name")
     lastname = forms.CharField(widget=forms.TextInput(), label="Last Name")
     email = forms.EmailField(widget=forms.EmailInput())
@@ -26,7 +26,7 @@ class MentorForm(forms.ModelForm):
     any_other_details = forms.CharField(widget=forms.Textarea(attrs={'rows' : "5"}))
 
     class Meta:
-        model = Mentor
+        model = Partner
         fields = '__all__'
 
 class ContactPageForm(forms.ModelForm):

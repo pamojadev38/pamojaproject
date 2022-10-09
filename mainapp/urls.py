@@ -22,7 +22,7 @@ urlpatterns = [
     path('blog', views.blog_view, name='blog'),
     path('post', views.PostCreateView.as_view(template_name='mainapp/post.html'), name='write-a-post'),
     path('volunteer', views.volunteer_view, name='volunteer'),
-    path('mentor', views.mentor_view, name='mentor'),
+    path('partner', views.partner_view, name='partner'),
     path('impact', views.impact_view, name='impact'),
     path('gallery', views.gallery_view, name='gallery'),
     path('gallery/<str:catego>/', views.gallery_detail, name='gallery-detail'),
