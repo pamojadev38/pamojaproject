@@ -15,3 +15,11 @@
     font-weight: 400;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Lyon Display Web Black';
+    src: local('Lyon Display Web Black'), local('Lyon Display Web Black'),
+        url('../fonts/12ca6eb8a45b8ac406fb5a09bb9daab2.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
