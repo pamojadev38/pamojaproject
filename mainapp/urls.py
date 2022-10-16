@@ -20,6 +20,7 @@ urlpatterns = [
     ####### END OF CAUSES #######
     
     path('blog', views.blog_view, name='blog'),
+    path('single-blog/<int:id>/', views.single_blog_view, name="single-blog"),
     path('post', views.PostCreateView.as_view(template_name='mainapp/post.html'), name='write-a-post'),
     path('volunteer', views.volunteer_view, name='volunteer'),
     path('partner', views.partner_view, name='partner'),

@@ -109,97 +109,47 @@
   <br><br>
   <main role="main" class="container">
     <div class="row">
-    <div class="col-md-8 blog-main">
-        <!-- <h3 class="pb-3 mb-4 font-italic border-bottom">
-        From the Firehose 
-        </h3> -->
-
+    <div class="col-md-10 mx-auto blog-main">
+        {% for post in posts %}
         <div class="blog-post">
         <h2 class="blog-post-title blogheading mobiliner">
-          Empowering Girls through Socio-Economic approaches
+          <a href="{% url 'mainapp:single-blog' post.id %}" style="color:black">{{post.title}}</a>
         </h2>
-        <p class="blog-post-meta">May 31, 2019 by <a href="#">admin</a></p>
+        <p class="blog-post-meta">Posted on {{post.date_posted}} by <a href="#">{{post.author}}</a></p>
 
         <p class="mobiliner">
-          From Marjorie Mack oludhe's freedom song 'Atieno yo!'' and 'coming to birth, to Maya Angelou's 'I know why the caged bird sings', many writers 
-          expressed how the African girl was abandoned and how their rights have never been thought of and infringed, being given the second place in any 
-          household after their brothers, to being married off for wealth to older men when they hit their puberty, the African society have for a very 
-          long time neglected their girls and used them as property to acquire wealth whenever they deem it necessary.
-          But 'ring the bells that can still ring, forgetting the perfect sacrifice, there is a hole in every crack, that's how the light gets in, and this 
-          is where Pamoja CBO stems in, to give these girls back their stolen dignity. And as the Kenya continues to evolve and embrace new inventions, girls 
-          are given a chance to a more bearable and comfortable life. They are being given a chance they never had, taken to school and be supported throughout 
-          without missing some days during the usual month, and being empowered to be resilient, confident and independent when there's need to be.
+          {{post.content|truncatewords:"100"|safe}}
         </p>
-        <p><em>Continue reading</em>...</p>
+        <p><a href="{% url 'mainapp:single-blog' post.id %}"><em>Continue reading</em>...</a></p>
         <hr>        
         
         </div><!-- /.blog-post -->
-
-        <!-- <div class="blog-post">
-        <h2 class="blog-post-title" style="font-family: 'Playfair Display', serif;line-height: 48px;font-size: 40px;font-weight:500;">Feed the Animals campaign</h2>
-        <p class="blog-post-meta">March 23, 2022 by <a href="#">Steven Grant</a></p>
-
-        <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-        <blockquote>
-            <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-        </blockquote>
-        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <p><em>Continue reading</em>...</p>
-      </div>/.blog-post -->
-
-        <!--<div class="blog-post">
-        <h2 class="blog-post-title" style="font-family: 'Playfair Display', serif;line-height: 48px;font-size: 40px;font-weight:500;">Save the Girl Child Campaign</h2>
-        <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
-
-        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <ul>
-            <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-            <li>Donec id elit non mi porta gravida at eget metus.</li>
-            <li>Nulla vitae elit libero, a pharetra augue.</li>
-        </ul>
-        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-        <p><em>Continue reading...</em></p>
-        </div> /.blog-post -->
-
-        <nav class="blog-pagination">
-        <a class="btn btn-primary" href="#">Older</a>
-        <a class="btn btn-secondary disabled" href="#">Newer</a>
-        </nav>
+        {% endfor %}
+        <br>
+        <center>
+          <nav class="blog-pagination">
+            <a class="btn btn-primary" href="#">Older</a>
+            <a class="btn btn-secondary disabled" href="#">Newer</a>
+          </nav>
+        </center>
+        
 
     </div><!-- /.blog-main -->
-    
-    <aside class="col-md-4 blog-sidebar"><br>
-        <div class="p-3 mb-3 rounded" style="background-color:#D2E7C4;">
-        <h4 class="">About</h4>
-        <p class="mb-0">This is the blog section of our organization where we share our updates, ideas and so much more. 
-        </p>
-        </div>
-
-        <!-- <div class="p-3">
-        <h4 class="">Archives</h4>
-        <ol class="list-unstyled mb-0">
-            <li><a href="#">June 2013</a></li>
-            <li><a href="#">May 2013</a></li>
-            <li><a href="#">April 2013</a></li>
-        </ol>
-        </div> -->
-
-        <!-- <div class="p-3">
-        <h4 class="">Elsewhere</h4>
-        <ol class="list-unstyled">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-        </ol>
-        </div> -->
-    </aside><!-- /.blog-sidebar -->
 
     </div><!-- /.row -->
 
 </main>
 <br><br><br>
-</body>
+<div style="background-color: #027701;">
+  <div class="">
+      <footer class="flex-wrap justify-content-center py-2 border-top">
+          <div class="col-md-12 d-flex justify-content-center py-3">
+              <span class="footer-alt-text text-white">Copyright © 2022&nbsp;&nbsp;  |  &nbsp;&nbsp;Pamoja CBO&nbsp;&nbsp;  |  &nbsp;&nbsp;All Rights Reserved</span>
+          </div>
+      </footer>
+  </div>
+</div>
+
 
 
 <script src="{% static 'js/jquery.min.js' %}"></script>
@@ -222,6 +172,19 @@
 <script>eval(mod_pagespeed_dFb3UKP9Kq);</script>
 <script>eval(mod_pagespeed_c7BIxLN_4h);</script>
 <script>eval(mod_pagespeed_HdekMp55Bh);</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/634c4b86daff0e1306d247db/1gfh0e28g';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 </body>
 
 <!-- Mirrored from preview.colorlib.com/theme/givehope/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 May 2022 13:10:02 GMT -->

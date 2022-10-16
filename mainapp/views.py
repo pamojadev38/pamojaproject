@@ -52,10 +52,18 @@ def cause_youth_center(request):
 
 
 
+
 ######### End of Causes ##################
 
 def blog_view(request):
-    return render(request, 'mainapp/blog.html')
+    posts = Post.objects.all()
+    context = {'posts':posts}
+    return render(request, 'mainapp/blog.html',context)
+
+def single_blog_view(request, id):
+    single_post = Post.objects.get(id=id)
+    context = {'single_post':single_post}
+    return render(request, 'mainapp/blog-single.html', context)
 
 def volunteer_view(request):
     if request.method == 'POST':
