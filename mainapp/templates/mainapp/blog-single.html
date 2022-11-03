@@ -70,37 +70,67 @@
           font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
         }
       }
+      .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+    .dropdown-menu{
+        margin-top: 0;
+    }
       </style>
-  <script
-    nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script>
+<script>
+  $(document).ready(function(){
+      $(".dropdown").hover(function(){
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if(dropdownMenu.is(":visible")){
+              dropdownMenu.parent().toggleClass("open");
+          }
+      });
+  });     
+  </script>
 </head>
 
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="{% url 'mainapp:home' %}">
-        <img class="img-fluid" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
-          style="width:180px;height:auto">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
-          <li class="nav-item"><a href="{% url 'mainapp:causes' %}" class="nav-link">Causes</a></li>
-          <li class="nav-item active"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
-          <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
-          <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
-        </ul>
-      </div>
+        <a class="navbar-brand" href="{% url 'mainapp:home' %}">
+            <img class="img-fluid" src="{% static 'images/home/PamojaPamoja.png' %}" alt="logo"
+                style="width:180px;height:auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                      aria-haspopup="true" aria-expanded="false">About Us</a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="{% url 'mainapp:about' %}#whoweare" style="font-size: 14px;">Who We Are</a>
+                      <a class="dropdown-item" href="{% url 'mainapp:about' %}#history" style="font-size: 14px;">Our
+                          History</a>
+                      <a class="dropdown-item" href="{% url 'mainapp:about' %}#missionvision" style="font-size: 14px;">Mission and Vision</a>
+                      <a class="dropdown-item" href="{% url 'mainapp:about' %}#team" style="font-size: 14px;">Our Team</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">What We Do</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'mainapp:causes' %}" style="font-size: 14px;">Causes</a>
+                        <a class="dropdown-item" href="{% url 'mainapp:impact' %}" style="font-size: 14px;">Our
+                            Impact</a>
+                    </div>
+                </li>
+                <li class="nav-item active"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
     </div>
-
-  </nav>
+</nav>
 <br><br><br><br><br><br>
   
   <div class="col-6 mx-auto">

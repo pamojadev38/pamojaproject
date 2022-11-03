@@ -83,8 +83,23 @@
         font-size: 100px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
     }
 }
-
+.dropdown:hover .dropdown-menu{
+        display: block;
+    }
+    .dropdown-menu{
+        margin-top: 0;
+    }
 </style>
+<script>
+    $(document).ready(function(){
+        $(".dropdown").hover(function(){
+            var dropdownMenu = $(this).children(".dropdown-menu");
+            if(dropdownMenu.is(":visible")){
+                dropdownMenu.parent().toggleClass("open");
+            }
+        });
+    });     
+    </script>
 </head>
 
 <body>
@@ -101,7 +116,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">About Us</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'mainapp:about' %}#whoweare" style="font-size: 14px;">Who We Are</a>
+                            <a class="dropdown-item" href="{% url 'mainapp:about' %}#history" style="font-size: 14px;">Our
+                                History</a>
+                            <a class="dropdown-item" href="{% url 'mainapp:about' %}#missionvision" style="font-size: 14px;">Mission and Vision</a>
+                            <a class="dropdown-item" href="{% url 'mainapp:about' %}#team" style="font-size: 14px;">Our Team</a>
+                        </div>
+                      </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                             aria-haspopup="true" aria-expanded="false">What We Do</a>
@@ -114,36 +139,27 @@
                     <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
                     <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-      <!-- <br><br><br><br><br><br><br><br><br>
-    <div>
-        <div class="">
-            <div class=""
-                style="background-image: url('../../static/images/BACKGROUNDS/causesbanner2.webp'); height:350px;background-position: center center;background-size: cover;">
-                <div class=" container"
-                    style="color:#fff;font-size:15px;left:15px;right:15px;text-align:left;text-shadow:none;top:90%;margin-top:-180px;padding-top:150px">
-                    <h6 class="animated fadeIn" style="font-size: 40px;font-weight: bold;color:black">Causes that we're serving
-                    </h6>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br><br> -->
 
     <br><br><br><br><br>
     <div class="container pt-5" style="max-width:1440px;">
         <div class="row align-items-center">
             <div class="col-md-8">
                 <p>
-                    <span class="kondoo" style="">Our</span>&nbsp;&nbsp;
-                    <span class="kondoo2" style="">work</span>
+                    <span class="kondoo" >Our</span>&nbsp;&nbsp;
+                    <span class="kondoo2" >work</span>
                 </p>
                 <p class="pt-2 text-justify mobiliner" style="font-family: 'Brandon Text';">
-                    We are committed to improving the quality of lives of local communities through our tailored programs.
+                    Working towards empowering communities to be able to address the most significant things 
+                    affecting their<br> wellbeing through. Community health programming, education and training and 
+                    Research and development.
+                </p>
+                <p class="text-justify mobiliner">
+                    We are  Passionate about helping communities develop the skills they need to make positive life changes.
                 </p>
             </div>
             <div class="col-md-4">
@@ -173,12 +189,12 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
                 <div class="card animate-up-3 mt-5" style="border-radius:15px;">
                     <a href="{% url 'mainapp:cause-dreams' %}">
-                        <img src="{% static 'images/henryj.png' %}" class="card-img-top cardimage"
+                        <img src="{% static 'images/PartnerLogos/henryjack.png' %}" class="card-img-top cardimage"
                             style="height:300px;width:100%">
                     </a>
                     <div class="card-body bg-white"
                         style="border-radius:0 0 15px 15px;box-shadow:7px 7px 15px 4px rgb(204 204 204 / 30%)">
-                        <h5 class="card-title"><a href="{% url 'mainapp:cause-dreams' %}" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Reducing new HIV infections and preventing GBV - D.R.E.A.M.S.</a>
+                        <h5 class="card-title"><a href="{% url 'mainapp:cause-dreams' %}" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Reducing new HIV infection and Gender Based Violence among Adolescents Girls and Young Women by 40%</a>
                         </h5>
                         <p class="card-text mobiliner">Most people living with or at risk of contracting HIV do not 
                             have access to prevention, care, or treatment.
@@ -199,7 +215,7 @@
                     </a>
                     <div class="card-body bg-white"
                         style="border-radius:0 0 15px 15px;box-shadow:7px 7px 15px 4px rgb(204 204 204 / 30%)">
-                        <h5 class="card-title"><a href="{% url  'mainapp:cause-ovc' %}" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Supporting children & adolescents affected/infected with HIV/AIDS to stay health, stable, safe and schooled - O.V.C.</a>
+                        <h5 class="card-title"><a href="{% url  'mainapp:cause-ovc' %}" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Supporting children and Families affected or infected with HIV & AIDS</a>
                         </h5>
                         <p class="card-text mobiliner">Regular HIV testing, treatment, monitoring and care for children living with HIV can 
                             enable them to live long and fulfilling lives.
@@ -342,19 +358,20 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-group">
                 <div class="card animate-up-3 mt-5" style="border-radius:15px;">
-                    <a href="">
+                    <a href="{% url 'mainapp:cause-caregivers' %}">
                         <img src="{% static 'images/caregivers.jpg' %}" class="card-img-top cardimage"
                             style="height:300px;width:100%">
                     </a>
                     <div class="card-body bg-white"
                         style="border-radius:0 0 15px 15px;box-shadow:7px 7px 15px 4px rgb(204 204 204 / 30%)">
                         </p>
-                        <h5 class="card-title"><a href="" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Caregivers Sensitization.</a>
+                        <h5 class="card-title"><a href="{% url 'mainapp:cause-caregivers' %}" style="color:#303538;font-weight:700;font-size:27px;line-height:27px;font-family:'Lyon Display Web Black';">Caregivers Sensitization.</a>
                         </h5>
-                        <p class="card-text mobiliner">Caregivers sensitization caregivers sensitization caregivers sensitization caregivers sensitization.</p>
+                        <p class="card-text mobiliner">Families Matter! I and II Program is an Evidence Informed Behavioral Intervention (EBI) which was adapted from Families Matter!</p>
                         <center>
-                            <a href=""></a>
-                            <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            <a href="{% url 'mainapp:cause-caregivers' %}">
+                                <button class="mt-3" style="background-color:#027701;color:#fff;text-transform: uppercase;letter-spacing: 2px;padding:11px 15px;border:none;font-size:75%;font-weight:bold;">learn more</button>
+                            </a>
                         </center>
                     </div>
                 </div>
@@ -394,10 +411,9 @@
       <div class="col-md-4">
           <div>
               <center>
-                <img src="{% static 'images/home/newlavender.jpeg' %}" class="img-fluid" style="height:350px;width:auto;border-radius: 10px;">
+                <img src="{% static 'images/kaiya.webp' %}" class="img-fluid" style="height:350px;width:auto;border-radius: 10px;">
               </center>
-              <p class="text-center pt-2 mobiliner"><span style="font-weight:bold">Awino Okore.</span></p>
-              <p class="text-center mobiliner" style="font-weight:bold">Strategy, Planning & Implementation Consultant.</p>
+              <p class="text-center pt-2 mobiliner"><span style="font-weight:bold">Kaiya Ian - Volunteer</span></p>
           </div>
       </div>
   </div>

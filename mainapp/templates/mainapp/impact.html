@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
-    <link href="https://db.onlinewebfonts.com/c/12ca6eb8a45b8ac406fb5a09bb9daab2?family=Lyon+Display+Web+Black" rel="stylesheet" type="text/css"/>
-    <!-- <script nonce="99bc3aeb-c369-4673-a964-210f658c954f">(function (w, d) { !function (a, e, t, r) { a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = { deferred: [] }, a.zaraz.q = [], a.zaraz._f = function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: t }) } }; for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e); a.addEventListener("DOMContentLoaded", (() => { var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0]; for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) { const e = a.zaraz.q.shift(); a.zarazData.q.push(e) } z.defer = !0; for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => { try { a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t)) } catch { a.zarazData["z_" + t.slice(7)] = e.getItem(t) } })); z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t) })) }(w, d, 0, "script"); })(window, document);</script> -->
+    
 <style>
     .btona {
         cursor: pointer;
@@ -169,7 +168,23 @@
     font-size:30px;
   }
 }
+.dropdown:hover .dropdown-menu{
+        display: block;
+    }
+    .dropdown-menu{
+        margin-top: 0;
+    }
 </style>
+<script>
+  $(document).ready(function(){
+      $(".dropdown").hover(function(){
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if(dropdownMenu.is(":visible")){
+              dropdownMenu.parent().toggleClass("open");
+          }
+      });
+  });     
+  </script>
 </head>
 <!-- <body style="background-image:url(../../static/images/blob-haikei2.svg);background-size:cover;background-attachment:scroll;background-repeat:no-repeat;"></body> -->
 <body>
@@ -186,7 +201,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                          aria-haspopup="true" aria-expanded="false">About Us</a>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'mainapp:about' %}#whoweare" style="font-size: 14px;">Who We Are</a>
+                          <a class="dropdown-item" href="{% url 'mainapp:about' %}#history" style="font-size: 14px;">Our
+                              History</a>
+                          <a class="dropdown-item" href="{% url 'mainapp:about' %}#missionvision" style="font-size: 14px;">Mission and Vision</a>
+                          <a class="dropdown-item" href="{% url 'mainapp:about' %}#team" style="font-size: 14px;">Our Team</a>
+                      </div>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                             aria-haspopup="true" aria-expanded="false">What We Do</a>
@@ -199,7 +224,7 @@
                     <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
                     <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -213,8 +238,8 @@
                     <span class="impact" style="">Impact</span>
                 </p>
                 <p class="pt-4 mobiliner" style="font-family: 'Brandon Text';">
-                  Your generosity makes it possible for our work to create meaningful change that touches countless lives. Whether it's a one-time gift or a recurring donation, 
-                  every dollar goes directly to our mission of promoting <span style="font-weight:bold">Healthier, Happier and Able Communities.</span>
+                  Within our fifteen years of community service we are proud to have 
+                  impacted over 35000 families differently through our community program.
                 </p>
                 
                 <hr style="padding-top:2px;">

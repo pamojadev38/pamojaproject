@@ -15,8 +15,6 @@
   <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
   <link rel="stylesheet" href="{% static 'css/animate.css' %}">
   <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
-  <link href="https://db.onlinewebfonts.com/c/12ca6eb8a45b8ac406fb5a09bb9daab2?family=Lyon+Display+Web+Black"
-        rel="stylesheet" type="text/css" />
 
 <style>
 /* Extra small viewport or screen */
@@ -64,8 +62,23 @@
     font-size:40px;
   }
 }
-
+.dropdown:hover .dropdown-menu{
+        display: block;
+    }
+    .dropdown-menu{
+        margin-top: 0;
+    }
 </style>
+<script>
+  $(document).ready(function(){
+      $(".dropdown").hover(function(){
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if(dropdownMenu.is(":visible")){
+              dropdownMenu.parent().toggleClass("open");
+          }
+      });
+  });     
+  </script>
 </head>
 
 <body>
@@ -82,7 +95,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="{% url 'mainapp:home' %}" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="{% url 'mainapp:about' %}" class="nav-link">About Us</a></li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                          aria-haspopup="true" aria-expanded="false">About Us</a>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'mainapp:about' %}#whoweare" style="font-size: 14px;">Who We Are</a>
+                          <a class="dropdown-item" href="{% url 'mainapp:about' %}#history" style="font-size: 14px;">Our
+                              History</a>
+                          <a class="dropdown-item" href="{% url 'mainapp:about' %}#missionvision" style="font-size: 14px;">Mission and Vision</a>
+                          <a class="dropdown-item" href="{% url 'mainapp:about' %}#team" style="font-size: 14px;">Our Team</a>
+                      </div>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                             aria-haspopup="true" aria-expanded="false">What We Do</a>
@@ -95,7 +118,7 @@
                     <li class="nav-item"><a href="{% url 'mainapp:blog' %}" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="{% url 'mainapp:volunteer' %}" class="nav-link">Volunteer</a></li>
                     <li class="nav-item"><a href="{% url 'mainapp:gallery' %}" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="{% url 'mainapp:contact' %}" class="nav-link">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -177,7 +200,7 @@
           <br><br>
         </div>
         <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
-          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/avatar.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/emily.webp' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
           <span class="" style="color:black"><span style="font-weight:bold;">Emily Omondi</span><br>HIV Testing Service Provider</span>
           <br><br>
         </div>
@@ -187,13 +210,13 @@
           <br><br>
         </div>
         <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
-          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/avatar.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/georgeotieno.webp' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
           <span class="" style="color:black"><span style="font-weight:bold;">George Otieno</span><br>Child Sponsorship Project</span>
           <br><br>
         </div>
         <div class="w-100"></div>
         <div class="col text-center animate-box fadeInUp animated" style="background-color: white;">
-          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/avatar.jpeg' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
+          <span class="icon" style="width: 150px;height: 150px;display: table;margin: 0 auto;margin-bottom: 20px;"><img src="{% static 'images/Staff/markphalen.webp' %}" class="img-fluid" style="width:180px;height:auto;border-radius:50%"></span>
           <span class="" style="color:black"><span style="font-weight:bold;">Markphalen Odiwuor</span><br>ICT Officer, ECHO Project</span>
           <br><br>
         </div>

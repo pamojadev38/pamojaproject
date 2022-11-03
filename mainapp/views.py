@@ -49,7 +49,8 @@ def cause_safe_water_projects(request):
 def cause_youth_center(request):
     return render(request, 'mainapp/cause-youth-center.html')
 
-
+def cause_caregivers(request):
+    return render(request, 'mainapp/causes-caregivers.html')
 
 
 
