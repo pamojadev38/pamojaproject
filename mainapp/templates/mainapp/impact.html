@@ -3,190 +3,34 @@
 <html lang="en">
 
 <head>
-    <title>Pamoja CBO</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Pamoja is a community Based Organization in Kenya who are passionate about helping communities develop the skills they need to make positive changes for themselves.">
-    <!-- <link rel="stylesheet" href="css/stuff.css" />
-  <link rel="stylesheet" href="css/stuff2.css" /> -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
-    <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
-    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
-    <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
-    
+  <title>Pamoja CBO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://pamojapamoja.org/impact" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
 <style>
-    .btona {
-        cursor: pointer;
-        border-radius: 7px;
-        border: 2px solid transparent; 
-        background-color:#35954b;
-        padding:11px 15px;
-        line-height:1.2;
-        font-size: 14px;
-        font-weight: bold;
-        color: #fff;
-        box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
-        vertical-align:middle;
-    }
-    .btona:hover{
-        outline: none;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        background: #35954b !important;
-        color: #fff !important;
-        border-color: #35954b !important; 
-    }
-    .btona2{
-        cursor: pointer;
-        border-radius: 7px;
-        border: 2px solid transparent; 
-        background-color:#d2e7c4;
-        padding:11px 15px;
-        line-height:1.2;
-        font-size: 14px;
-        font-weight: bold;
-        color: #000;
-        box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
-        vertical-align:middle;
-    }
-    .btona2:hover{
-        outline: none;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        background: #d2e7c4 !important;
-        color: #000 !important;
-        border-color: #d2e7c4 !important;
-    }
-/* Extra small viewport or screen */
-@media (min-width: 280px) and (max-width: 480px) {
-  .our{
-    font-size: 60px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 40px;
-  }
-  .impact{
-    font-size:50px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 40px;
-  }
-  .mobiliner{
-    line-height:1.4;
-  }
-  .t1{
-    font-size:40px;
-  }
-  .t2{
-    font-size:20px;
-  }
-  .t3{
-    font-size:40px;
-  }
-  .t4{
-    font-size:20px;
-  }
-}
-
-@media only screen and (min-width : 480px) {
-  .our{
-  font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
-}
-.impact{
-  font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
-}
-.t1{
-    font-size:60px;
-  }
-  .t2{
-    font-size:40px;
-  }
-  .t3{
-    font-size:40px;
-  }
-  .t4{
-    font-size:30px;
-  }
-}
-/* Small viewport or screen */
-@media only screen and (min-width : 768px) {
-  .our{
-  font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
-}
-.impact{
-  font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
-}
-.t1{
-    font-size:60px;
-  }
-  .t2{
-    font-size:40px;
-  }
-  .t3{
-    font-size:40px;
-  }
-  .t4{
-    font-size:30px;
-  }
-}
-/* Medium viewport or screen */
-@media only screen and (min-width : 992px) {
-  .our{
-  font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
-}
-.impact{
-  font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
-}
-.t1{
-    font-size:60px;
-  }
-  .t2{
-    font-size:40px;
-  }
-  .t3{
-    font-size:40px;
-  }
-  .t4{
-    font-size:30px;
-  }
-}
-/* Large viewport or screen */
-@media only screen and (min-width : 1200px) {
-.our{
-  font-size: 100px;color:#027701;font-family:'Lyon Display Web Black';font-weight:700;line-height: 80px;
-}
-.impact{
-  font-size: 70px;color:#303538;font-family:'Lyon Display Web Black';font-weight: 700;line-height: 54px;
-}
-.t1{
-    font-size:60px;
-  }
-  .t2{
-    font-size:40px;
-  }
-  .t3{
-    font-size:40px;
-  }
-  .t4{
-    font-size:30px;
-  }
-}
-.dropdown:hover .dropdown-menu{
-        display: block;
-    }
-    .dropdown-menu{
-        margin-top: 0;
-    }
+.btona,.btona2{cursor:pointer;padding:11px 15px;line-height:1.2;font-size:14px;font-weight:700;vertical-align:middle}.btona{border-radius:7px;border:2px solid transparent;background-color:#35954b;color:#fff;box-shadow:0 5px 20px -5px rgba(0,0,0,.5)}.btona:hover{outline:0;-webkit-box-shadow:none;box-shadow:none;background:#35954b!important;color:#fff!important;border-color:#35954b!important}.btona2{border-radius:7px;border:2px solid transparent;background-color:#d2e7c4;color:#000;box-shadow:0 5px 20px -5px rgba(0,0,0,.5)}.btona2:hover{outline:0;-webkit-box-shadow:none;box-shadow:none;background:#d2e7c4!important;color:#000!important;border-color:#d2e7c4!important}@media (min-width:280px) and (max-width:480px){.impact,.our{font-family:'Lyon Display Web Black';font-weight:700;line-height:40px}.our{font-size:60px;color:#027701}.impact{font-size:50px;color:#303538}.mobiliner{line-height:1.4}.t1,.t3{font-size:40px}.t2,.t4{font-size:20px}}@media only screen and (min-width :480px){.impact,.our{font-family:'Lyon Display Web Black';font-weight:700}.our{font-size:100px;color:#027701;line-height:80px}.impact{font-size:70px;color:#303538;line-height:54px}.t1{font-size:60px}.t2,.t3{font-size:40px}.t4{font-size:30px}}@media only screen and (min-width :768px){.impact,.our{font-family:'Lyon Display Web Black';font-weight:700}.our{font-size:100px;color:#027701;line-height:80px}.impact{font-size:70px;color:#303538;line-height:54px}.t1{font-size:60px}.t2,.t3{font-size:40px}.t4{font-size:30px}}@media only screen and (min-width :992px){.impact,.our{font-family:'Lyon Display Web Black';font-weight:700}.our{font-size:100px;color:#027701;line-height:80px}.impact{font-size:70px;color:#303538;line-height:54px}.t1{font-size:60px}.t2,.t3{font-size:40px}.t4{font-size:30px}}@media only screen and (min-width :1200px){.impact,.our{font-family:'Lyon Display Web Black';font-weight:700}.our{font-size:100px;color:#027701;line-height:80px}.impact{font-size:70px;color:#303538;line-height:54px}.t1{font-size:60px}.t2,.t3{font-size:40px}.t4{font-size:30px}}.dropdown:hover .dropdown-menu{display:block}.dropdown-menu{margin-top:0}
 </style>
 <script>
   $(document).ready(function(){
-      $(".dropdown").hover(function(){
-          var dropdownMenu = $(this).children(".dropdown-menu");
-          if(dropdownMenu.is(":visible")){
-              dropdownMenu.parent().toggleClass("open");
-          }
-      });
+    $(".dropdown").hover(function(){
+      var dropdownMenu = $(this).children(".dropdown-menu");
+      if(dropdownMenu.is(":visible")){
+          dropdownMenu.parent().toggleClass("open");
+      }
+    });
   });     
-  </script>
+</script>
 </head>
-<!-- <body style="background-image:url(../../static/images/blob-haikei2.svg);background-size:cover;background-attachment:scroll;background-repeat:no-repeat;"></body> -->
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -234,8 +78,8 @@
         <div class="row align-items-center">
             <div class="col-md-5">
                 <p>
-                    <span class="our" style="">Our</span><br>
-                    <span class="impact" style="">Impact</span>
+                    <span class="our">Our</span><br>
+                    <span class="impact">Impact</span>
                 </p>
                 <p class="pt-4 mobiliner" style="font-family: 'Brandon Text';">
                   Within our fifteen years of community service we are proud to have 
@@ -266,10 +110,8 @@
               <img src="{% static 'images/image172.webp' %}" class="img-fluid">
             </div>
         </div>
-
         <div class="row pt-5 align-items-center">
           <div class="col-md-6">
-            <!-- <img src="{% static 'images/peopleimpact.png' %}" class="img-fluid"> -->
             <img src="{% static 'images/BACKGROUNDS/3_cropped.webp' %}" class="img-fluid">
           </div>
           
@@ -279,7 +121,6 @@
               <span class="t2" style="color:#027701">Beneficiaries</span>
             </p>
           </div>
-
           <div class="col-md-3">
             <p class="text-justify mobiliner" style="font-family:'Brandon Text'">
               Pamoja Community Based Organization, through its programs serves a total of 15,687 direct 
@@ -288,7 +129,6 @@
             </p>
           </div>
         </div>
-
         <div class="row pt-5 align-items-center">
           <div class="col-md-3">
             <img src="{% static 'images/test.svg' %}" class="img-fluid">
@@ -314,7 +154,6 @@
             </p>
           </div>
           <div class="col-md-3 order-3 order-md-3">
-            <!-- <img src="{% static 'images/graduate.svg' %}" class="img-fluid"> -->
             <p class="pt-2" style="font-family:'Lyon Display Web Black';">
               <span class="t3">5,311</span>
               <span style="font-size:25px;color:#027701">&nbsp;&nbsp;Sanitary Pads.</span>
@@ -323,12 +162,8 @@
               education to over 1,325 which has helped girls gain more school days and cub absenteeism.</p>
           </div>
         </div>
-
         <div class="row pt-5 d-flex justify-content-center align-items-center">
           <div class="col-md-6">
-            <center>
-              <!-- <img src="{% static 'images/sanitary.jpg' %}" class="img-fluid" style="width:300px;height:200px;"> -->
-            </center>
             <p class="pt-2" style="font-family:'Lyon Display Web Black';">
               <span class="t3">2,022</span>
               <span style="font-size:25px;color:#027701">&nbsp;&nbsp;Contraceptives</span>
@@ -340,18 +175,6 @@
             </p>
             <p class="text-justify mobiliner" style="font-family:'Brandon Text';">We have initiated 391 young women (15-24) on HIV Pre exposure prophylaxis to<br> reduce their risk to contracting HIV.</p>
           </div>
-
-          <!-- <div class="col-md-3">
-            <center>
-               <img src="{% static 'images/contraceptives.png' %}" class="img-fluid" style="width:300px;height:200px;"> 
-            </center>
-            <p class="pt-2" style="font-family:'Lyon Display Web Black';">
-              <span class="t3">2,022</span>
-              <span style="font-size:25px;color:#027701">&nbsp;&nbsp;Contraceptives</span>
-            </p>
-            <p class="text-justify mobiliner" style="font-family:'Brandon Text';">More than 1,049 girls and young women have been initiated in contraceptives.</p>
-          </div> -->
-
           <div class="col-md-3">
             <center>
               <img src="{% static 'images/cash.svg' %}" class="img-fluid" style="width:300px;height:200px;">  
@@ -362,7 +185,6 @@
             </p>
             <p class="text-justify mobiliner" style="font-family:'Brandon Text';">We gave out unconditional cash transfer to a total of 472 young women aged 20-24.</p>
           </div>
-
           <div class="col-md-3">
             <center>
               <img src="{% static 'images/little-boy-dressing-up-to-go-to-school-5237892-4369520.png' %}" class="img-fluid" style="width:300px;height:200px;">
@@ -374,7 +196,6 @@
             <p class="text-justify mobiliner" style="font-family:'Brandon Text';">More than 3,723 children in secondary and primary schools have received school uniforms and other scholastic materials.</p>
           </div>
         </div>
-
         <div class="row pt-5 pb-5">
           <div class="col-md-3">
             <center>
@@ -401,21 +222,6 @@
             <p class="text-justify mobiliner" style="font-family:'Brandon Text';">Over 1,204 children were facilitated to acquire birth certificates.</p>
           </div>
         </div>
-
-        <!-- <div class="row pt-5 align-items-center pb-5">
-          <div class="col-md-6">
-             <img src="{% static 'images/womenprep.png' %}" class="img-fluid"> 
-          </div>
-          <div class="col-md-6">
-            <p style="font-family:'Lyon Display Web Black';">
-              <span class="t1">530</span>
-              <span class="t2" style="color:#027701">&nbsp;&nbsp;Prep</span>
-            </p>
-            <p class="text-justify mobiliner" style="font-family:'Brandon Text'">
-              We have initiated 391 young women (15-24) on HIV Pre exposure prophylaxis to reduce their risk to contracting HIV.
-            </p>
-          </div>
-        </div> -->
       </div>
       <br>
       <div style="background-color: #027701;">
@@ -427,7 +233,6 @@
             </footer>
         </div>
       </div>
-
 </body>
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script
@@ -463,7 +268,4 @@
   </script>
   <!--End of Tawk.to Script-->
 </body>
-
-<!-- Mirrored from preview.colorlib.com/theme/givehope/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 May 2022 13:09:47 GMT -->
-
 </html>

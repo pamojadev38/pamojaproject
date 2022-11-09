@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+from decouple import config
 from pathlib import Path
 import os
 import dj_database_url
@@ -22,10 +22,10 @@ from django.contrib.messages import constants as messages
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure---@3fu2d6h^u2)%u!qsu%^9c144r00x3mc3k8z12beo0mi_&@!'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['pamojabeta2.herokuapp.com','127.0.0.1','localhost']
 
@@ -174,3 +174,10 @@ CKEDITOR_IMAGE_BACKEND = 'pillow'
 #     'custom_undo_redo_levels': 10,
 # }
 # TINYMCE_SPELLCHECKER = True
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+SECURE_HSTS_SECONDS = config('SECURE_HSTS_SECONDS')
+SECURE_HSTS_INCLUDE_SUBDOMAINS = config('SECURE_HSTS_INCLUDE_SUBDOMAINS', cast=bool)
+SECURE_HSTS_PRELOAD = config('SECURE_HSTS_PRELOAD', cast=bool)

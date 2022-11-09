@@ -2,452 +2,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Pamoja CBO</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Pamoja is a community Based Organization in Kenya who are passionate about helping communities develop the skills they need to make positive changes for themselves.">
-    <!-- <link rel="stylesheet" href="css/stuff.css" />
-    <link rel="stylesheet" href="css/stuff2.css" /> -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
-    <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
-    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
-    <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
-        integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
-        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
-    
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
-    <link id="css-preset" href="{% static 'images/home/preset1.css' %}" rel="stylesheet">
-    <style>
-      body {
-          margin: 0;
-          padding: 0;
-      }
-
-      /* .container{
-          width:90%
-          margin:10px auto;
-      } */
-      .portfolio-menu {
-          text-align: center;
-      }
-
-      .portfolio-menu ul li {
-          display: inline-block;
-          margin: 0;
-          list-style: none;
-          padding: 10px 15px;
-          cursor: pointer;
-          -webkit-transition: all 05s ease;
-          -moz-transition: all 05s ease;
-          -ms-transition: all 05s ease;
-          -o-transition: all 05s ease;
-          transition: all .5s ease;
-      }
-
-      .portfolio-item {
-          /*width:100%;*/
-      }
-
-      .portfolio-item .item {
-          /*width:303px;*/
-          float: left;
-          margin-bottom: 10px;
-      }
-
-
-
-
-
-      .portfolio .portfolio-item {
-  margin-bottom: 30px;
-}
-.portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 35px auto;
-  list-style: none;
-  text-align: center;
-  background: #fff;
-  border-radius: 50px;
-  padding: 2px 15px;
-}
-.portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 15px 8px 15px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #272829;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-  color: #149ddd;
-}
-.portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-.portfolio .portfolio-wrap {
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-.portfolio .portfolio-wrap::before {
-  content: "";
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  transition: all ease-in-out 0.3s;
-  z-index: 2;
-  opacity: 0;
-}
-.portfolio .portfolio-wrap .portfolio-links {
-  opacity: 1;
-  left: 0;
-  right: 0;
-  bottom: -60px;
-  z-index: 3;
-  position: absolute;
-  transition: all ease-in-out 0.3s;
-  display: flex;
-  justify-content: center;
-}
-.portfolio .portfolio-wrap .portfolio-links a {
-  color: #fff;
-  font-size: 28px;
-  text-align: center;
-  background: rgba(20, 157, 221, 0.75);
-  transition: 0.3s;
-  width: 50%;
-}
-.portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: rgba(20, 157, 221, 0.95);
-}
-.portfolio .portfolio-wrap .portfolio-links a + a {
-  border-left: 1px solid #37b3ed;
-}
-.portfolio .portfolio-wrap:hover::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-}
-.portfolio .portfolio-wrap:hover .portfolio-links {
-  opacity: 1;
-  bottom: 0;
-}
-.dropdown:hover .dropdown-menu{
-        display: block;
-    }
-    .dropdown-menu{
-        margin-top: 0;
-    }
+  <title>Pamoja CBO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://pamojapamoja.org/gallery" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" crossorigin="anonymous" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+  <link id="css-preset" href="{% static 'images/home/preset1.css' %}" rel="stylesheet">
+  <style>
+    body{margin:0;padding:0}.portfolio-menu{text-align:center}.portfolio-menu ul li{display:inline-block;margin:0;list-style:none;padding:10px 15px;cursor:pointer;-webkit-transition:5s;-moz-transition:5s;-ms-transition:5s;-o-transition:5s;transition:.5s}.portfolio-item .item{float:left;margin-bottom:10px}.portfolio .portfolio-item{margin-bottom:30px}.portfolio #portfolio-flters{padding:2px 15px;margin:0 auto 35px;list-style:none;text-align:center;background:#fff;border-radius:50px}.portfolio #portfolio-flters li{cursor:pointer;display:inline-block;padding:10px 15px 8px;font-size:14px;font-weight:600;line-height:1;text-transform:uppercase;color:#272829;margin-bottom:5px;transition:.3s ease-in-out}.portfolio #portfolio-flters li.filter-active,.portfolio #portfolio-flters li:hover{color:#149ddd}.portfolio #portfolio-flters li:last-child{margin-right:0}.portfolio .portfolio-wrap{transition:.3s;position:relative;overflow:hidden;z-index:1}.portfolio .portfolio-wrap::before{content:"";background:rgba(255,255,255,.5);position:absolute;left:0;right:0;top:0;bottom:0;transition:.3s ease-in-out;z-index:2;opacity:0}.portfolio .portfolio-wrap .portfolio-links{opacity:1;left:0;right:0;bottom:-60px;z-index:3;position:absolute;transition:.3s ease-in-out;display:flex;justify-content:center}.portfolio .portfolio-wrap .portfolio-links a{color:#fff;font-size:28px;text-align:center;background:rgba(20,157,221,.75);transition:.3s;width:50%}.portfolio .portfolio-wrap .portfolio-links a:hover{background:rgba(20,157,221,.95)}.portfolio .portfolio-wrap .portfolio-links a+a{border-left:1px solid #37b3ed}.portfolio .portfolio-wrap:hover::before{top:0;left:0;right:0;bottom:0;opacity:1}.portfolio .portfolio-wrap:hover .portfolio-links{opacity:1;bottom:0}.dropdown:hover .dropdown-menu{display:block}.dropdown-menu{margin-top:0}
 </style>
 <script>
-(function() {
-  "use strict";
-
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
-    }
-  }
-
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
-      }
-    }
-  }
-
-  /**
-   * Easy on scroll event listener 
-   */
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
-
-  /**
-   * Navbar links active state on scroll
-   */
-  let navbarlinks = select('#navbar .scrollto', true)
-  const navbarlinksActive = () => {
-    let position = window.scrollY + 200
-    navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
-      if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active')
-      } else {
-        navbarlink.classList.remove('active')
-      }
-    })
-  }
-  window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive)
-
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    let elementPos = select(el).offsetTop
-    window.scrollTo({
-      top: elementPos,
-      behavior: 'smooth'
-    })
-  }
-
-  /**
-   * Back to top button
-   */
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
-      } else {
-        backtotop.classList.remove('active')
-      }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-  }
-
-  /**
-   * Mobile nav toggle
-   */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('body').classList.toggle('mobile-nav-active')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
-
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
-  on('click', '.scrollto', function(e) {
-    if (select(this.hash)) {
-      e.preventDefault()
-
-      let body = select('body')
-      if (body.classList.contains('mobile-nav-active')) {
-        body.classList.remove('mobile-nav-active')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-      scrollto(this.hash)
-    }
-  }, true)
-
-  /**
-   * Scroll with ofset on page load with hash links in the url
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
-    }
-  });
-
-  /**
-   * Hero type effect
-   */
-  const typed = select('.typed')
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
-  }
-
-  /**
-   * Skills animation
-   */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
-
-  /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
-      });
-
-      let portfolioFilters = select('#portfolio-flters li', true);
-
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
-
-  });
-
-  /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
-  });
-
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
-  });
-
-})()
+!function(){"use strict";let e=(e,t=!1)=>(e=e.trim(),t)?[...document.querySelectorAll(e)]:document.querySelector(e),t=(t,i,l,s=!1)=>{let o=e(i,s);o&&(s?o.forEach(e=>e.addEventListener(t,l)):o.addEventListener(t,l))},i=(e,t)=>{e.addEventListener("scroll",t)},l=e("#navbar .scrollto",!0),s=()=>{let t=window.scrollY+200;l.forEach(i=>{if(!i.hash)return;let l=e(i.hash);l&&(t>=l.offsetTop&&t<=l.offsetTop+l.offsetHeight?i.classList.add("active"):i.classList.remove("active"))})};window.addEventListener("load",s),i(document,s);let o=t=>{let i=e(t).offsetTop;window.scrollTo({top:i,behavior:"smooth"})},a=e(".back-to-top");if(a){let n=()=>{window.scrollY>100?a.classList.add("active"):a.classList.remove("active")};window.addEventListener("load",n),i(document,n)}t("click",".mobile-nav-toggle",function(t){e("body").classList.toggle("mobile-nav-active"),this.classList.toggle("bi-list"),this.classList.toggle("bi-x")}),t("click",".scrollto",function(t){if(e(this.hash)){t.preventDefault();let i=e("body");if(i.classList.contains("mobile-nav-active")){i.classList.remove("mobile-nav-active");let l=e(".mobile-nav-toggle");l.classList.toggle("bi-list"),l.classList.toggle("bi-x")}o(this.hash)}},!0),window.addEventListener("load",()=>{window.location.hash&&e(window.location.hash)&&o(window.location.hash)});let r=e(".typed");if(r){let c=r.getAttribute("data-typed-items");c=c.split(","),new Typed(".typed",{strings:c,loop:!0,typeSpeed:100,backSpeed:50,backDelay:2e3})}let d=e(".skills-content");d&&new Waypoint({element:d,offset:"80%",handler:function(t){e(".progress .progress-bar",!0).forEach(e=>{e.style.width=e.getAttribute("aria-valuenow")+"%"})}}),window.addEventListener("load",()=>{let i=e(".portfolio-container");if(i){let l=new Isotope(i,{itemSelector:".portfolio-item"}),s=e("#portfolio-flters li",!0);t("click","#portfolio-flters li",function(e){e.preventDefault(),s.forEach(function(e){e.classList.remove("filter-active")}),this.classList.add("filter-active"),l.arrange({filter:this.getAttribute("data-filter")}),l.on("arrangeComplete",function(){AOS.refresh()})},!0)}}),GLightbox({selector:".portfolio-lightbox"}),new Swiper(".portfolio-details-slider",{speed:400,loop:!0,autoplay:{delay:5e3,disableOnInteraction:!1},pagination:{el:".swiper-pagination",type:"bullets",clickable:!0}}),new Swiper(".testimonials-slider",{speed:600,loop:!0,autoplay:{delay:5e3,disableOnInteraction:!1},slidesPerView:"auto",pagination:{el:".swiper-pagination",type:"bullets",clickable:!0},breakpoints:{320:{slidesPerView:1,spaceBetween:20},1200:{slidesPerView:3,spaceBetween:20}}}),window.addEventListener("load",()=>{AOS.init({duration:1e3,easing:"ease-in-out",once:!0,mirror:!1})})}();
 </script>
+<script>
+  $('.portfolio-menu ul li').click(function () {
+    $('.portfolio-menu ul li').removeClass('active');
+    $(this).addClass('active');
 
-
-  <script>
-      // $('.portfolio-item').isotope({
-      //  	itemSelector: '.item',
-      //  	layoutMode: 'fitRows'
-      //  });
-      $('.portfolio-menu ul li').click(function () {
-          $('.portfolio-menu ul li').removeClass('active');
-          $(this).addClass('active');
-
-          var selector = $(this).attr('data-filter');
-          $('.portfolio-item').isotope({
-              filter: selector
-          });
-          return false;
+    var selector = $(this).attr('data-filter');
+    $('.portfolio-item').isotope({
+        filter: selector
+    });
+    return false;
+  });
+  $(document).ready(function () {
+      var popup_btn = $('.popup-btn');
+      popup_btn.magnificPopup({
+          type: 'image',
+          gallery: {
+              enabled: true
+          }
       });
-      $(document).ready(function () {
-          var popup_btn = $('.popup-btn');
-          popup_btn.magnificPopup({
-              type: 'image',
-              gallery: {
-                  enabled: true
-              }
-          });
-      });
-  </script>
-  <script>
-    $(document).ready(function(){
-        $(".dropdown").hover(function(){
-            var dropdownMenu = $(this).children(".dropdown-menu");
-            if(dropdownMenu.is(":visible")){
-                dropdownMenu.parent().toggleClass("open");
-            }
-        });
-    });     
-    </script>
+    });
+</script>
+<script>
+  $(document).ready(function(){
+    $(".dropdown").hover(function(){
+      var dropdownMenu = $(this).children(".dropdown-menu");
+        if(dropdownMenu.is(":visible")){
+          dropdownMenu.parent().toggleClass("open");
+        }
+    });
+  });     
+</script>
 </head>
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -515,7 +128,6 @@
         
     </div><br><br>
 </div>
-
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script
   src="{% static 'js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js%2bjquery.easing.1.3.js.pagespeed.jc.UfoK2ZK92N.js' %}"></script>

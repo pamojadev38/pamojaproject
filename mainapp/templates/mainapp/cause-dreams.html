@@ -6,7 +6,6 @@
     <title>Pamoja CBO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Pamoja is a community Based Organization in Kenya who are passionate about helping communities develop the skills they need to make positive changes for themselves.">
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -15,60 +14,24 @@
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
     <style>
-        .lyon {
-            font-family: 'Lyon Display Web Black'
+        .lyon {font-family: 'Lyon Display Web Black'}.arnhem {font-family: 'Arnhem Blond'}
+        @media (min-width: 280px) and (max-width: 480px) {
+            .mobiliner{line-height:1.4;}.cha-1 {order:1;}
+            .cha-2{padding-top:25px;order:2;}
         }
-        .arnhem {
-            font-family: 'Arnhem Blond'
-        }
-    /* Extra small viewport or screen */
-    @media (min-width: 280px) and (max-width: 480px) {
-        .mobiliner{
-            line-height:1.4;
-        }
-        .cha-1 {
-            order:1;
-        }
-        .cha-2{
-            padding-top:25px;
-            order:2;
-        }
-    }
-
-    @media only screen and (min-width : 480px) {
-
-    }
-    /* Small viewport or screen */
-    @media only screen and (min-width : 768px) {
-
-    }
-    /* Medium viewport or screen */
-    @media only screen and (min-width : 992px) {
-
-    }
-    /* Large viewport or screen */
-    @media only screen and (min-width : 1200px) {
-
-    }
-    .dropdown:hover .dropdown-menu{
-        display: block;
-    }
-    .dropdown-menu{
-        margin-top: 0;
-    }
-</style>
-<script>
-    $(document).ready(function(){
-        $(".dropdown").hover(function(){
-            var dropdownMenu = $(this).children(".dropdown-menu");
-            if(dropdownMenu.is(":visible")){
-                dropdownMenu.parent().toggleClass("open");
-            }
+        .dropdown:hover .dropdown-menu{display: block;}.dropdown-menu{margin-top: 0;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".dropdown").hover(function(){
+                var dropdownMenu = $(this).children(".dropdown-menu");
+                if(dropdownMenu.is(":visible")){
+                    dropdownMenu.parent().toggleClass("open");
+                }
+            });
         });
-    });     
     </script>
 </head>
-
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -117,7 +80,6 @@
         <div class="row align-items-center">
             <div class="col-md-1"></div>
             <div class="col-md-5">
-                <!-- <h2 class="text-center"><span style="font-weight:bold">D.R.E.A.M.S.</span> - Reducing new HIV  infections and preventing GBV  among Adolescent girls and young women ages 9-24</h2> -->
                 <h1 class="lyon" style="font-weight: bold;letter-spacing: 2px;font-size:29px;">Reducing new HIV infections and preventing GBV - D.R.E.A.M.S</h1>
                 <p class="text-justify mobiliner">Most people living with or at risk of contracting HIV do not 
                     have access to prevention, care, or treatment.</p>
@@ -165,7 +127,6 @@
                         <h3 class="mb-0 lyon" style="font-weight: bold;">Program Details. </h3>
                     </div>
                     <div class="col-4 text-right">
-                        <!--<a href="#!" class="btn btn-sm btn-primary">Settings</a>-->
                     </div>
                 </div>
             </div>
@@ -218,23 +179,10 @@
                     <span style="font-weight:bold">Economic strengthening</span>: sponsoring girls to vocational schools for hands on training skills, IGAs for young women. 
                 </p>
             </div>
-            <!-- <div class="card-body">
-                <p class="text-justify mobiliner"><span style="font-weight: bold;">D.R.E.A.M.S.</span> - <span style="font-weight:bold">D</span>etermined <span style="font-weight:bold">R</span>esilient <span style="font-weight:bold">E</span>mpowered <span style="font-weight:bold">A</span>ids Free <span style="font-weight:bold">M</span>entored and <span style="font-weight:bold">S</span>afe.</p>
-                <p class="text-justify mobiliner"><span style="font-weight:bold">Partner: </span>Henry Jackson Foundation.</p>
-                <p class="text-justify mobiliner"><span style="font-weight:bold">Target beneficiaries: </span>Adolescent Girls and Young Women ages 10-24 years.</p>
-                <p class="text-justify mobiliner"><span style="font-weight:bold">Duration: </span>Since 2016.</p>
-                <p class="text-justify mobiliner"><span style="font-weight:bold">Key Accomplishments: </span>Supporting over 10000 AGYW with various interventions including biomedical, structural & behavioral interventions.</p>
-                <p class="text-justify mobiliner"><span style="font-weight:bold">Most people living with or at risk of contracting HIV do not have access to prevention, care, or treatment: Nyanza has been registering some of the highest HIV prevalence rates in the last decade.</span></p>
-                <p class="text-justify mobiliner">Orphans in Kenya are silent victims of violence facing sexual exploitation and are at a higher risk of contracting HIV/AIDS.</p>
-                <p class="text-justify mobiliner">Did you know that AGYW in low income contries experience early pregnancy associated with.</p>
-                <p class="text-justify mobiliner">Support the dream of bringing up <span style="font-weight:bold">D</span>etermined <span style="font-weight:bold">R</span>esilient <span style="font-weight:bold">E</span>mpowered <span style="font-weight:bold">A</span>ids Free <span style="font-weight:bold">M</span>entored and <span style="font-weight:bold">S</span>afe girls and young women by <a href="{% url 'mainapp:about' %}#donatesection">donating 10 USD.</a></p>
-            </div> -->
         </div>
     </div>
 </div>
-      </div>
-
-
+</div>
 <br><br><br>
 
 <script src="{% static 'js/jquery.min.js' %}"></script>

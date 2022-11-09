@@ -5,87 +5,52 @@
   <title>Pamoja CBO</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Pamoja is a community Based Organization in Kenya who are passionate about helping communities develop the skills they need to make positive changes for themselves.">
-  <!-- <link rel="stylesheet" href="css/stuff.css" />
-<link rel="stylesheet" href="css/stuff2.css" /> -->
-<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-<link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-<link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
-<link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
-<link rel="stylesheet" href="{% static 'css/animate.css' %}">
-<link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
-    integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
-    integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
-    <style>
-  
-      /* Extra small viewport or screen */
-      @media (min-width: 280px) and (max-width: 480px) {
-        .blogtitle{
-          font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;
-        }
-        .blogheading{
-          font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 30px;font-weight:500;
-        }
-        .mobiliner{
-          line-height:1.4;
-        }
-      }
-      
-      @media only screen and (min-width : 480px) {
-        .blogtitle{
-          font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;
-        }
-        .blogheading{
-          font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
-        }
-      }
-      /* Small viewport or screen */
-      @media only screen and (min-width : 768px) {
-        .blogtitle{
-          font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;
-        }
-        .blogheading{
-          font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
-        }
-      }
-      /* Medium viewport or screen */
-      @media only screen and (min-width : 992px) {
-        .blogtitle{
-          font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;
-        }
-        .blogheading{
-          font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
-        }
-      }
-      /* Large viewport or screen */
-      @media only screen and (min-width : 1200px) {
-        .blogtitle{
-          font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;
-        }
-        .blogheading{
-          font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;
-        }
-      }
-      .dropdown:hover .dropdown-menu{
-        display: block;
+  <meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://pamojapamoja.org/blog" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/stuff3.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <link rel="stylesheet" href="{% static 'css/brandonstyle.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" crossorigin="anonymous" />
+  <style>
+    @media (min-width: 280px) and (max-width: 480px) {
+      .blogtitle{font-family: 'Arnhem Blond' !important;font-weight:900;font-size:40px;}
+      .blogheading{font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 30px;font-weight:500;}
+      .mobiliner{line-height:1.4;}
     }
-    .dropdown-menu{
-        margin-top: 0;
+    @media only screen and (min-width : 480px) {
+      .blogtitle{font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;}
+      .blogheading{font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;}
     }
-      </style>
-<script>
-  $(document).ready(function(){
-      $(".dropdown").hover(function(){
-          var dropdownMenu = $(this).children(".dropdown-menu");
-          if(dropdownMenu.is(":visible")){
-              dropdownMenu.parent().toggleClass("open");
-          }
-      });
-  });     
+    @media only screen and (min-width : 768px) {
+      .blogtitle{font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;}
+      .blogheading{font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;}
+    }
+    @media only screen and (min-width : 992px) {
+      .blogtitle{font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;}
+      .blogheading{font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;}
+    }
+    @media only screen and (min-width : 1200px) {
+      .blogtitle{font-family: 'Arnhem Blond' !important;font-weight:900;font-size:55px;}
+      .blogheading{font-family: 'Arnhem Blond', serif;line-height: 48px;font-size: 40px;font-weight:500;}
+    }
+    .dropdown:hover .dropdown-menu{display: block;}.dropdown-menu{margin-top: 0;}
+  </style>
+  <script>
+    $(document).ready(function(){
+        $(".dropdown").hover(function(){
+            var dropdownMenu = $(this).children(".dropdown-menu");
+            if(dropdownMenu.is(":visible")){
+                dropdownMenu.parent().toggleClass("open");
+            }
+        });
+    });     
   </script>
 </head>
 
@@ -132,7 +97,6 @@
     </div>
 </nav>
 <br><br><br><br><br><br>
-  
   <div class="col-6 mx-auto">
     <h1 class="blog-post-title blogheading mobiliner text-center">{{single_post.title}}</h1>
     <p class="blog-post-meta text-center pt-4">Posted on {{single_post.date_posted}} by <a href="#">{{single_post.author}}</a></p>
@@ -190,7 +154,4 @@
   </script>
   <!--End of Tawk.to Script-->
 </body>
-
-<!-- Mirrored from preview.colorlib.com/theme/givehope/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 May 2022 13:10:04 GMT -->
-
 </html>
