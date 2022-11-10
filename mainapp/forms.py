@@ -1,6 +1,8 @@
 from django import forms
 from .models import Volunteer, Partner, ContactPage, MailList, Help_choices
 from .countries import COUNTRIES
+from captcha.fields import ReCaptchaField
+from captcha.widgets import ReCaptchaV3
 
 class VolunteerForm(forms.ModelForm):
     firstname = forms.CharField(widget=forms.TextInput(),label="First Name")
@@ -30,6 +32,13 @@ class PartnerForm(forms.ModelForm):
         fields = '__all__'
 
 class ContactPageForm(forms.ModelForm):
+    captcha = ReCaptchaField(
+        widget=ReCaptchaV3(
+            attrs={
+                'required_score':0.85
+            }
+        )
+    )
     name = forms.CharField(widget=forms.TextInput())
     email = forms.EmailField(widget=forms.EmailInput())
     subject = forms.CharField(widget=forms.TextInput())

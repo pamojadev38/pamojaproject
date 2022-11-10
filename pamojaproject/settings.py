@@ -25,7 +25,7 @@ from django.contrib.messages import constants as messages
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = False
 
 ALLOWED_HOSTS = ['pamojabeta2.herokuapp.com','127.0.0.1','localhost']
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'ckeditor',
     'ckeditor_uploader',
+    'captcha'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -127,7 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
@@ -181,3 +182,6 @@ SECURE_SSL_REDIRECT = True
 SECURE_HSTS_SECONDS = config('SECURE_HSTS_SECONDS')
 SECURE_HSTS_INCLUDE_SUBDOMAINS = config('SECURE_HSTS_INCLUDE_SUBDOMAINS', cast=bool)
 SECURE_HSTS_PRELOAD = config('SECURE_HSTS_PRELOAD', cast=bool)
+
+RECAPTCHA_PUBLIC_KEY = config('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = config('RECAPTCHA_PRIVATE_KEY')
